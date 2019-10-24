@@ -10,7 +10,12 @@
 
     &__knownFrom {
         display: flex;
-        justify-content: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        @include from($tablet) {
+            justify-content: center;
+        }
     }
 
     &__knownLogo {

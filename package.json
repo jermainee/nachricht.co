@@ -9,7 +9,8 @@
   "scripts": {
     "watch": "sass --watch ./resources/scss/app.scss ./public/css/app.css",
     "scss": "sass ./resources/scss/app.scss ./public/css/app.css",
-    "scss-production": "sass --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css"
+    "scss-production": "sass --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css",
+    "js": "rollup ./resources/js/app.js --file ./public/js/app.js --format iife"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://gitlab.com/jermainee/nachricht.co#readme",
   "dependencies": {
     "bulma": "^0.8.0",
+    "rollup": "^1.25.2",
     "sass": "^1.23.1"
   }
 }
