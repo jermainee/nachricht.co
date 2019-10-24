@@ -15,10 +15,11 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('uid', 32)->unique();
+            $table->string('uid', 32)->unique()->nullable();
             $table->longText('message');
             $table->text('password')->nullable();
-            $table->timestamps();
+	        $table->timestamp('deleted_at')->nullable();
+	        $table->timestamps();
         });
     }
 

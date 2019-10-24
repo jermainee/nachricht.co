@@ -17,6 +17,7 @@ class Message extends Model
 		'password',
 		'created_at',
 		'updated_at',
+		'deleted_at',
 	];
 
 	/**
@@ -25,7 +26,18 @@ class Message extends Model
 	 * @var array
 	 */
 	protected $hidden = [
+		'uid',
 		'message',
 		'password',
+	];
+
+	protected $attributes = [
+		'id' => null,
+		'uid' => null,
+		'message' => null,
+		'password' => null,
+		'created_at' => null,
+		'updated_at' => null,
+		'deleted_at' => null
 	];
 }

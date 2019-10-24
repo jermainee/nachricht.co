@@ -2,6 +2,11 @@
     &__messageField {
         @extend .textarea;
         @extend .has-margin-bottom;
+        resize: vertical;
+
+        &--no-resize {
+            resize: none;
+        }
 
         &:not([rows]) {
             min-height: 35vh;

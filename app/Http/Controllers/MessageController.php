@@ -22,7 +22,7 @@ class MessageController extends Controller
 		$message->save();
 
 		$encryptionKey = $this->generateId(16);
-		$link = 'https://nachricht.co.test/n/' . $message->uid . '#' . $encryptionKey;
+		$link = 'https://nachricht.co.test/' . $message->uid . '_' . $encryptionKey;
 
 		return Response::json([
 			'success' => true,
@@ -34,12 +34,37 @@ class MessageController extends Controller
 		]);
     }
 
-	public function read(int $id): JsonResponse
+	public function read()
 	{
-		return Response::json([
-			'success' => true,
-			'passwordRequired' => true,
-			'message' => 'sdfsdfdsf'
+		$uid = session('uid');
+		$key = session('key');
+		if (empty($uid) || empty($key)) {
+			return Response::redirectTo('/');
+		}
+
+		session([
+			'uid' => null,
+			'key' => null,
+		]);
+
+		/** @var Message|null $message */
+		$message = Message::where('uid', $uid)->first();
+		if ($message === null) {
+			return Response::redirectTo('/');
+		}
+
+		$decodedMassage = base64_decode($message->message);
+		$dateTime = new \DateTime();
+		$message->update([
+			'uid' => null,
+			'message' => '',
+			'password' => '',
+			'deleted_at' => $dateTime,
+			'updated_at' => $dateTime
+		]);
+
+		return view('frontPage.read', [
+			'message' => $decodedMassage
 		]);
 	}
 

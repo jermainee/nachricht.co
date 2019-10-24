@@ -3506,7 +3506,7 @@ a.tag:hover {
   border-color: #b5b5b5;
 }
 .select select:focus, .textarea:focus, .frontPage__messageField:focus, .input:focus, .select select.is-focused, .is-focused.textarea, .is-focused.frontPage__messageField, .is-focused.input, .select select:active, .textarea:active, .frontPage__messageField:active, .input:active, .select select.is-active, .is-active.textarea, .is-active.frontPage__messageField, .is-active.input {
-  border-color: #00d1b2;
+  border-color: #b5b5b5;
   box-shadow: none rgba(50, 115, 220, 0.25);
 }
 .select select[disabled], [disabled].textarea, [disabled].frontPage__messageField, [disabled].input, fieldset[disabled] .select select, .select fieldset[disabled] select, fieldset[disabled] .textarea, fieldset[disabled] .frontPage__messageField, fieldset[disabled] .input {
@@ -8962,6 +8962,12 @@ label.panel-block:hover {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
 }
 
+.frontPage__messageField {
+  resize: vertical;
+}
+.frontPage__messageField--no-resize {
+  resize: none;
+}
 .frontPage__messageField:not([rows]) {
   min-height: 35vh;
 }
