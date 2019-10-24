@@ -12,6 +12,9 @@ $global-padding: 1rem;
 
 // shadows
 $box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+$input-shadow: none;
+$input-focus-box-shadow-size: none;
+$input-focus-border-color: $primary;
 
 // navbar
 $navbar-height: $global-margin * 4;
