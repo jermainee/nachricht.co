@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Message;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
 
@@ -16,7 +15,7 @@ class MessageController extends Controller
 		$dateTime = new \DateTime();
 		$message = new Message();
 		$message->uid = $this->generateId(16);
-		$message->message = $request->input('message');
+		$message->message = base64_encode($request->input('message'));
 		$message->password = !empty($request->input('password')) ? Hash::make($request->input('password')) : null;
 		$message->created_at = $dateTime;
 		$message->updated_at = $dateTime;

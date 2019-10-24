@@ -8,14 +8,7 @@
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
                             <textarea class="frontPage__messageField" name="message" placeholder="10 lines of textarea" autofocus></textarea>
-
-                            <div class="control has-icons-left has-margin-bottom">
-                                <input class="input" name="password" type="password" placeholder="Passwort"/>
-                                <span class="icon is-small is-left">
-                                <i class="fas fa-lock"></i>
-                            </span>
-                            </div>
-
+                            <input class="input has-margin-bottom" name="password" type="password" placeholder="Passwort"/>
                             <button class="button is-primary is-fullwidth has-text-weight-bold">Nachricht erstellen</button>
                         </form>
                     </div>
@@ -24,10 +17,7 @@
                         <p>Kopiere diesen Link und sende ihn wem du möchtest.<br>Die erstellte Nachricht wird sofort gelöscht, nachdem sie das erste Mal geöffnet wurde.</p>
 
                         <div class="control has-icons-left has-margin-bottom">
-                            <input id="messageLink" class="input" type="text" value="https://nachricht.co/296141983619_3fKztCV9vhPx3rUh" readonly/>
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-lock"></i>
-                            </span>
+                            <input id="messageLink" class="input" type="text" readonly/>
                         </div>
 
                         <div class="columns">
