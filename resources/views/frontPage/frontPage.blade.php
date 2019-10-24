@@ -5,8 +5,8 @@
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
                 <div class="container">
-                    <div class="box">
-                        <form id="messageForm">
+                    <div id="messageForm" class="box">
+                        <form>
                             <textarea class="frontPage__messageField" placeholder="10 lines of textarea" autofocus></textarea>
 
                             <div class="control has-icons-left has-margin-bottom">
@@ -18,6 +18,46 @@
 
                             <button class="button is-primary is-fullwidth has-text-weight-bold">Nachricht erstellen</button>
                         </form>
+                    </div>
+
+                    <div id="linkForm" class="box is-hidden">
+                        <p>Kopiere diesen Link und sende ihn wem du möchtest.<br>Die erstellte Nachricht wird sofort gelöscht, nachdem sie das erste Mal geöffnet wurde.</p>
+
+                        <div class="control has-icons-left has-margin-bottom">
+                            <input id="messageLink" class="input" type="text" value="https://nachricht.co/296141983619_3fKztCV9vhPx3rUh" readonly/>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column">
+                                <a href="https://telegram.me/share/url?url=" class="button is-primary is-fullwidth has-text-weight-bold">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span class="is-hidden-mobile">Telegram</span>
+                                </a>
+                            </div>
+
+                            <div class="column">
+                                <a href="https://wa.me/?text=" class="button is-primary is-fullwidth has-text-weight-bold">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span class="is-hidden-mobile">WhatsApp</span>
+                                </a>
+                            </div>
+
+                            <div class="column">
+                                <a class="button is-primary is-fullwidth has-text-weight-bold">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span class="is-hidden-mobile">Link kopieren</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,25 +155,25 @@
 
                     <div class="frontPage__knownFrom">
                         <div class="frontPage__knownLogo">
-                            <a href="http://www.maedchen.de/" rel="noopener">
+                            <a href="http://www.maedchen.de/" rel="noopener" target="_blank">
                                 <img class="image" src="/images/known/maedchen.png" alt="Mädchen.de" />
                             </a>
                         </div>
 
                         <div class="frontPage__knownLogo">
-                            <a href="#" rel="noopener nofollow">
+                            <a href="#" rel="noopener nofollow" target="_blank">
                                 <img class="image" src="/images/known/amoranach.svg" alt="amorana.ch" />
                             </a>
                         </div>
 
                         <div class="frontPage__knownLogo">
-                            <a href="http://www.taiber-unternehmensberatung.de/" rel="noopener">
+                            <a href="http://www.taiber-unternehmensberatung.de/" rel="noopener" target="_blank">
                                 <img class="image" src="/images/known/rogertaiber.png" alt="Mädchen.de" />
                             </a>
                         </div>
 
                         <div class="frontPage__knownLogo">
-                            <a href="http://www.startupvalley.news/" rel="noopener">
+                            <a href="http://www.startupvalley.news/" rel="noopener" target="_blank">
                                 <img class="image" src="/images/known/startupvalleynews.png" alt="StartUpValley.news" />
                             </a>
                         </div>

@@ -2,4 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/api/', 'MessageController@message');
+Route::post('/message/create.json', 'MessageController@create');
+Route::get('/message/{id}/read.json', 'MessageController@read');
