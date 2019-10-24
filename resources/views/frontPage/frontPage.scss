@@ -1,0 +1,30 @@
+.frontPage {
+    &__messageField {
+        @extend .textarea;
+        @extend .has-margin-bottom;
+
+        &:not([rows]) {
+            min-height: 35vh;
+        }
+    }
+
+    &__knownFrom {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__knownLogo {
+        margin: 0 $global-margin;
+
+        & img {
+            height: 3rem;
+            max-width: 180px;
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+
+}

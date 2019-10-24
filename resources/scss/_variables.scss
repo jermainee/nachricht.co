@@ -1,0 +1,21 @@
+// colors
+$primary: #00d1b2;
+$light: #f9fbfc;
+
+// Responsiveness
+$fullhd-enabled: false;
+
+// spacing and radius
+$global-radius: 6px;
+$global-margin: 1rem;
+$global-padding: 1rem;
+
+// shadows
+$box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+
+// navbar
+$navbar-height: $global-margin * 4;
+
+// box (and product)
+$box-radius: $global-radius;
+$box-padding: $global-padding;

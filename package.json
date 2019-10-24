@@ -1,21 +1,28 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "axios": "^0.19",
-        "cross-env": "^5.1",
-        "laravel-mix": "^4.0.7",
-        "lodash": "^4.17.13",
-        "resolve-url-loader": "^2.3.1",
-        "sass": "^1.15.2",
-        "sass-loader": "^7.1.0"
-    }
+  "name": "nachricht.co",
+  "version": "5.0.0",
+  "description": "",
+  "private": true,
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "watch": "sass --watch ./resources/scss/app.scss ./public/css/app.css",
+    "scss": "sass ./resources/scss/app.scss ./public/css/app.css",
+    "scss-production": "sass --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/jermainee/nachricht.co.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/jermainee/nachricht.co/issues"
+  },
+  "homepage": "https://gitlab.com/jermainee/nachricht.co#readme",
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "sass": "^1.23.1"
+  }
 }
