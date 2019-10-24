@@ -5,27 +5,33 @@ namespace App\Http\Controllers;
 use App\Message;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
 
 class MessageController extends Controller
 {
-	private $apiKey = "CU2kTHMm7RXkeWs4KLCzhiTeYYmWU";
-
 	public function create(Request $request): JsonResponse
 	{
 		$dateTime = new \DateTime();
 		$message = new Message();
-		$message->id = $this->generateId();
+		$message->uid = $this->generateId(16);
 		$message->message = $request->input('message');
-		$message->password = Hash::make($request->input('message'));
+		$message->password = !empty($request->input('password')) ? Hash::make($request->input('password')) : null;
 		$message->created_at = $dateTime;
 		$message->updated_at = $dateTime;
 		$message->save();
 
+		$encryptionKey = $this->generateId(16);
+		$link = 'https://nachricht.co.test/n/' . $message->uid . '#' . $encryptionKey;
+
 		return Response::json([
 			'success' => true,
-			'messageId' => $message->id
+			'link' => $link,
+			'shareUrls' => (object) [
+				'whatsApp' => 'https://wa.me/?text=' . $link,
+				'telegram' => 'https://telegram.me/share/url?url=' . $link,
+			]
 		]);
     }
 
@@ -38,13 +44,13 @@ class MessageController extends Controller
 		]);
 	}
 
-	private function generateId(): string
+	private function generateId(int $length): string
 	{
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$charactersLength = strlen($characters);
 		$randomString = '';
 
-		for ($i = 0; $i < 16; $i++) {
+		for ($i = 0; $i < $length; $i++) {
 			$randomString .= $characters[rand(0, $charactersLength - 1)];
 		}
 

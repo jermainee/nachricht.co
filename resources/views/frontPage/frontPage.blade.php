@@ -5,12 +5,12 @@
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
                 <div class="container">
-                    <div id="messageForm" class="box">
-                        <form>
-                            <textarea class="frontPage__messageField" placeholder="10 lines of textarea" autofocus></textarea>
+                    <div class="box">
+                        <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
+                            <textarea class="frontPage__messageField" name="message" placeholder="10 lines of textarea" autofocus></textarea>
 
                             <div class="control has-icons-left has-margin-bottom">
-                                <input class="input" type="password" placeholder="Passwort"/>
+                                <input class="input" name="password" type="password" placeholder="Passwort"/>
                                 <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i>
                             </span>
@@ -32,29 +32,29 @@
 
                         <div class="columns">
                             <div class="column">
-                                <a href="https://telegram.me/share/url?url=" class="button is-primary is-fullwidth has-text-weight-bold">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
+                                <a id="shareTelegram" href="https://telegram.me/share/url?url=" class="button is-primary is-fullwidth has-text-weight-bold">
                                     <span class="is-hidden-mobile">Telegram</span>
+                                    <span class="icon">
+                                        <img src="/images/icons/telegram.svg" alt="Telegram" />
+                                    </span>
                                 </a>
                             </div>
 
                             <div class="column">
-                                <a href="https://wa.me/?text=" class="button is-primary is-fullwidth has-text-weight-bold">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
+                                <a id="shareWhatsApp" href="https://wa.me/?text=" class="button is-primary is-fullwidth has-text-weight-bold">
                                     <span class="is-hidden-mobile">WhatsApp</span>
+                                    <span class="icon">
+                                        <img src="/images/icons/whatsapp.svg" alt="WhatsApp" />
+                                    </span>
                                 </a>
                             </div>
 
                             <div class="column">
                                 <a class="button is-primary is-fullwidth has-text-weight-bold">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
                                     <span class="is-hidden-mobile">Link kopieren</span>
+                                    <span class="icon">
+                                        <img src="/images/icons/copy.svg" alt="Link kopieren" />
+                                    </span>
                                 </a>
                             </div>
                         </div>
