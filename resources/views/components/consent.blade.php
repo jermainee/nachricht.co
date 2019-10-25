@@ -3,7 +3,7 @@
     <div class="modal-content">
         <div class="box">
             <div class="title is-4 has-text-centered">
-                <span class="icon">
+                <span class="icon is-medium">
                     <img src="/images/icons/cookie.svg" alt="{{ trans('consent.consentText') }}"/>
                 </span>
                 <br/>

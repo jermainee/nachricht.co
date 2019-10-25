@@ -101,6 +101,7 @@
             </div>
         </footer>
 
+        @include('components.adblock')
         @include('components.consent')
         @yield('javascript')
     </body>
