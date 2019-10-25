@@ -1,15 +1,17 @@
 // colors
 $primary: #00d1b2;
 $light: #f9fbfc;
+$link: $primary;
 $modal-background-background-color: rgba(0, 0, 0, .3);
 
 // Responsiveness
 $fullhd-enabled: false;
 
 // spacing and radius
-$global-radius: 6px;
+$global-radius: 4px;
 $global-margin: 1rem;
 $global-padding: 1rem;
+$radius: $global-radius;
 
 // shadows
 $box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
