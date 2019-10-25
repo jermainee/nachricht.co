@@ -8,41 +8,39 @@
                     <img src="/images/icons/digital.svg" alt="AdBlocker"/>
                 </span>
                 <br/>
-                Du magst keine Werbung?
+                {{ trans('adblock.headline') }}
             </div>
             <p class="has-margin-bottom">
-                Das können wir natürlich verstehen.
-                Doch um Nachricht.co am Leben zu halten müssen wir monatlich Geld in Dinge wie zum Beispiel angemietete Server investieren.
-                Desweiteren stecken wir unser Herzblut in Form von Programmierung, Übersetzung und Support in dieses Projekt.
+                {{ trans('adblock.text') }}
             </p>
             <p class="has-margin-bottom has-text-weight-bold">
-                Wenn du unsere Arbeit und Nachricht.co unterstützen möchtest, dann deaktiviere bitte deinen AdBlocker auf unserer Seite! 😊
+                {{ trans('adblock.boldText') }}
             </p>
 
             <hr/>
 
             <div class="columns has-text-centered">
                 <div class="column">
-                    Weiterentwicklung
+                    {{ trans('adblock.development') }}
                     <span class="icon">
-                        <img src="/images/icons/time.svg" alt="Code"/>
+                        <img src="/images/icons/time.svg" alt="{{ trans('adblock.development') }}"/>
                     </span>
                 </div>
                 <div class="column">
-                    Servermiete
+                    {{ trans('adblock.servers') }}
                     <span class="icon">
-                        <img src="/images/icons/money.svg" alt="Server"/>
+                        <img src="/images/icons/money.svg" alt="{{ trans('adblock.servers') }}"/>
                     </span>
                 </div>
                 <div class="column">
-                    Deine Unterstützung
+                    {{ trans('adblock.help') }}
                     <span class="icon">
-                        <img src="/images/icons/iloveyou.svg" alt="Deine Unterstützung"/>
+                        <img src="/images/icons/iloveyou.svg" alt="{{ trans('adblock.help') }}"/>
                     </span>
                 </div>
             </div>
 
-            <button class="button is-primary is-fullwidth has-text-weight-bold has-margin-top" onclick="location.reload(true)">Seite neu laden</button>
+            <button class="button is-primary is-fullwidth has-text-weight-bold has-margin-top" onclick="location.reload(true)">{{ trans('adblock.reloadButton') }}</button>
         </div>
     </div>
 </div>
