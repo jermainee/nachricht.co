@@ -89,6 +89,14 @@
 
         <footer class="footer has-background-light">
             <div class="content has-text-centered">
+                <div class="has-margin-bottom">
+                    <a href="/faq" title="Häufig gestellte Fragen" class="has-text-grey">Häufig gestellte Fragen</a>
+                    &middot;
+                    <a href="/datenschutz" title="Datenschutz" class="has-text-grey">Datenschutz</a>
+                    &middot;
+                    <a href="/impressum" title="Impressum" class="has-text-grey">Impressum</a>
+                </div>
+
                 <p><strong>Nachricht.co</strong>, seit 2014 für dich da.</p>
             </div>
         </footer>
