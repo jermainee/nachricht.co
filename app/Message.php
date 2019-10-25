@@ -15,6 +15,7 @@ class Message extends Model
 		'uid',
 		'message',
 		'password',
+		'iv',
 		'created_at',
 		'updated_at',
 		'deleted_at',
@@ -29,6 +30,7 @@ class Message extends Model
 		'uid',
 		'message',
 		'password',
+		'iv',
 	];
 
 	protected $attributes = [
@@ -36,6 +38,7 @@ class Message extends Model
 		'uid' => null,
 		'message' => null,
 		'password' => null,
+		'iv' => null,
 		'created_at' => null,
 		'updated_at' => null,
 		'deleted_at' => null

@@ -25,16 +25,19 @@ class MessageController extends Controller
 			]);
 		}
 
+		$encryptionKey = $this->generateId(16);
+		$iv = $this->generateIv();
+
 		$dateTime = new \DateTime();
 		$message = new Message();
 		$message->uid = $this->generateId(16);
-		$message->message = base64_encode($request->input('message'));
+		$message->message = base64_encode($this->encryptMessage($request->input('message'), $encryptionKey, $iv));
 		$message->password = !empty($request->input('password')) ? Hash::make($request->input('password')) : null;
+		$message->iv = base64_encode($iv);
 		$message->created_at = $dateTime;
 		$message->updated_at = $dateTime;
 		$message->save();
 
-		$encryptionKey = $this->generateId(16);
 		$link = 'https://nachricht.co.test/' . $message->uid . '_' . $encryptionKey;
 
 		return Response::json([
@@ -67,6 +70,8 @@ class MessageController extends Controller
 		}
 
 		$decodedMassage = base64_decode($message->message);
+		$decryptedMessage = $this->decryptMessage($decodedMassage, $key, base64_decode($message->iv));
+
 		$dateTime = new \DateTime();
 		$message->update([
 			'uid' => null,
@@ -77,7 +82,7 @@ class MessageController extends Controller
 		]);
 
 		return view('frontPage.read', [
-			'message' => $decodedMassage
+			'message' => $decryptedMessage
 		]);
 	}
 
@@ -92,5 +97,24 @@ class MessageController extends Controller
 		}
 
 		return $randomString;
+	}
+
+	private function encryptMessage(string $plaintext, string $key, string $iv, $cipher = 'aes256'): string
+	{
+		$ciphertext = openssl_encrypt($plaintext, $cipher, $key, $options=0, $iv);
+
+		return $ciphertext;
+	}
+
+	private function decryptMessage(string $encrypted, string $key, string $iv, $cipher = 'aes256'): string
+	{
+		return openssl_decrypt($encrypted, $cipher, $key, $options=0, $iv);
+	}
+
+	private function generateIv($cipher = 'aes256'): string
+	{
+		$ivlen = openssl_cipher_iv_length($cipher);
+
+		return openssl_random_pseudo_bytes($ivlen);
 	}
 }

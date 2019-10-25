@@ -18,6 +18,7 @@ class CreateMessagesTable extends Migration
             $table->string('uid', 32)->unique()->nullable();
             $table->longText('message');
             $table->text('password')->nullable();
+            $table->text('iv');
 	        $table->timestamp('deleted_at')->nullable();
 	        $table->timestamps();
         });
