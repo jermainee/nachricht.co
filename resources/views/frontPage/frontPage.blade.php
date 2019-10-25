@@ -5,6 +5,10 @@
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
                 <div class="container">
+                    <div class="has-padding-bottom">
+                        @include('components.ads')
+                    </div>
+
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
                             <textarea class="frontPage__messageField" name="message" placeholder="{{ trans('frontpage.messagePlaceholder') }}" autofocus></textarea>
@@ -14,9 +18,11 @@
                     </div>
 
                     <div id="linkForm" class="box is-hidden">
-                        <p class="is-size-5">@lang('frontpage.copyText')</p>
+                        <p class="is-size-5 is-marginless">@lang('frontpage.copyText')</p>
 
-                        <div class="control has-icons-left has-margin-bottom">
+                        @include('components.ads')
+
+                        <div class="control has-icons-left has-margin-bottom has-margin-top">
                             <input id="messageLink" class="input" type="text" readonly/>
                         </div>
 

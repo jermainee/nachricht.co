@@ -5,6 +5,10 @@
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
                 <div class="container">
+                    <div class="has-padding-bottom">
+                        @include('components.ads')
+                    </div>
+
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
                             <textarea class="frontPage__messageField frontPage__messageField--no-resize" name="message" readonly>{{$message}}</textarea>

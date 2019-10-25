@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'messagePlaceholder' => '',
+	'messagePlaceholder' => 'Tippe hier deine Nachricht ein ...',
 	'passwordPlaceholder' => 'Passwort (optional) ...',
 	'createButton' => 'Nachricht erstellen',
 	'copyButton' => 'Link kopieren',
