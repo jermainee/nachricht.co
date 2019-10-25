@@ -1,9 +1,14 @@
 .navbar {
     box-shadow: $box-shadow;
+    z-index: 2;
 
     &__language {
         width: 1.2rem;
         height: 1.2rem;
         margin-right: $global-margin / 2;
     }
+}
+
+#cookieConsent {
+    z-index: 1;
 }

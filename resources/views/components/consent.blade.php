@@ -4,36 +4,36 @@
         <div class="box">
             <div class="title is-4 has-text-centered">
                 <span class="icon">
-                    <img src="/images/icons/cookie.svg" alt="Cookie Einstellungen"/>
+                    <img src="/images/icons/cookie.svg" alt="{{ trans('consent.consentText') }}"/>
                 </span>
                 <br/>
-                Cookie-Einstellungen
+                {{ trans('consent.consent') }}
             </div>
-            <p class="has-margin-bottom">Wir setzen auf unserer Website Cookies ein. Einige dieser Cookies sind essenziell notwendig (z.B. für die Sprachauswahl), während andere uns helfen Nachricht.co noch besser zu machen und dabei wirtschaftlich zu bleiben. Du kannst akzeptieren und uns damit maßgeblich unterstützen oder ablehnen. Nähere Informationen hierzu findest du in unserer Datenschutzerklärung.</p>
+            <p class="has-margin-bottom">{{ trans('consent.consentText') }}</p>
 
             <div class="columns has-text-centered">
                 <div class="column">
-                    Essenziell
+                    {{ trans('consent.essential') }}
                     <span class="icon">
-                        <img src="/images/icons/check.svg" alt="Essenziell"/>
+                        <img src="/images/icons/check.svg" alt="{{ trans('consent.essential') }}"/>
                     </span>
                 </div>
                 <div class="column">
-                    Marketing
+                    {{ trans('consent.marketing') }}
                     <span class="icon">
-                        <img src="/images/icons/check.svg" alt="Marketing"/>
+                        <img src="/images/icons/check.svg" alt="{{ trans('consent.marketing') }}"/>
                     </span>
                 </div>
                 <div class="column">
-                    Externe Medien
+                    {{ trans('consent.externalMedia') }}
                     <span class="icon">
-                        <img src="/images/icons/check.svg" alt="Externe Medien"/>
+                        <img src="/images/icons/check.svg" alt="{{ trans('consent.externalMedia') }}"/>
                     </span>
                 </div>
             </div>
 
-            <button id="cookieConsentAgree" class="button is-primary is-fullwidth has-text-weight-bold has-margin-bottom">Ich aktzeptiere!</button>
-            <button id="cookieConsentDisagree" class="button is-white is-fullwidth has-text-grey is-small">Nur essenzielle Cookies akzeptieren</button>
+            <button id="cookieConsentAgree" class="button is-primary is-fullwidth has-text-weight-bold has-margin-bottom">{{ trans('consent.agreeButton') }}</button>
+            <button id="cookieConsentDisagree" class="button is-white is-fullwidth has-text-grey is-small">{{ trans('consent.disagreeButton') }}</button>
         </div>
     </div>
 </div>
