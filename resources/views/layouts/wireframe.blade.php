@@ -48,12 +48,12 @@
                             <a class="navbar-item" href="/lang/en">
                                 <img src="/images/languages/en.svg" class="navbar__language" alt="English"/> English
                             </a>
-                            <a class="navbar-item"  href="/lang/es">
+                            <!--<a class="navbar-item"  href="/lang/es">
                                 <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/> Spanish
                             </a>
                             <a class="navbar-item"  href="/lang/ru">
                                 <img src="/images/languages/ru.svg" class="navbar__language" alt="Russian"/> Russian
-                            </a>
+                            </a>-->
                         </div>
                     </div>
                 </div>
