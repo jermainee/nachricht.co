@@ -10,8 +10,21 @@ use Illuminate\Support\Facades\Response;
 
 class MessageController extends Controller
 {
+	private const ALLOWED_REFERERS = [
+		'https://nachricht.co/',
+		'https://nachricht.co.test/',
+	];
+
 	public function create(Request $request): JsonResponse
 	{
+		$referer = $request->headers->get('referer');
+		if (!$referer || !in_array($referer, self::ALLOWED_REFERERS)) {
+			return Response::json([
+				'success' => false,
+				'error' => 'access denied',
+			]);
+		}
+
 		$dateTime = new \DateTime();
 		$message = new Message();
 		$message->uid = $this->generateId(16);
