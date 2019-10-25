@@ -91,6 +91,8 @@
                 <p><strong>Nachricht.co</strong>, seit 2014 für dich da.</p>
             </div>
         </footer>
+
+        @include('components.consent')
+        @yield('javascript')
     </body>
-    @yield('javascript')
 </html>
