@@ -1,6 +1,13 @@
 <?php
 
 return [
+	'messagePlaceholder' => '',
+	'passwordPlaceholder' => 'Passwort (optional) ...',
+	'createButton' => 'Nachricht erstellen',
+	'copyButton' => 'Link kopieren',
+	'copyText' => 'Kopiere den Link und sende ihn wem du möchtest.<br/>Die erstellte Nachricht wird gelöscht, nachdem sie das erste Mal geöffnet wurde.',
+	'createNew' => 'Neue Nachricht',
+
 	'welcome' => 'Was ist Nachricht.co?',
 	'welcomeText' => 'Mit Nachricht.co kannst du sich selbstzerstörende und verschlüsselte Einweg-Nachrichten über das Internet verschicken. Du musst nichtmal auf den Messenger oder das soziale Netzwerk deiner Wahl verzichten. Unabhängig, sicher und kostenlos!',
 
@@ -21,4 +28,8 @@ return [
 
 	'userfriendly' => 'Benutzerfreundlichkeit',
 	'userfriendlyText' => 'Wir legen großen Wert auf übersichtliches und einfaches Design, damit du dich so gut wie möglich zurecht findest. Außerdem werden Hyperlinks und Smileys automatisch erkannt und umgewandelt.',
+
+	'step1' => '<b>Schritt 1:</b> Tippe die gewünschte Nachricht in das Textfeld oben auf der Seite ein und klicke auf \'Nachricht erstellen\'.',
+	'step2' => '<b>Schritt 2:</b> Kopiere den Link, der dir daraufhin angezeigt wird und verschicke ihn an den gewünschten Gesprächspartner - z.B. via Facebook oder WhatsApp.',
+	'step3' => '<b>Schritt 3:</b> Nun klickt der Gesprächspartner auf den Link und kann die Nachricht ein einziges Mal lesen, da diese sich daraufhin selbst zerstört.',
 ];

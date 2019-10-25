@@ -123,18 +123,9 @@
             <h2 class="is-hidden">So verschickst du eine Nachricht</h2>
 
             <div class="columns">
-                <div class="column">
-                    <b>Schritt 1:</b> Nachricht erstellen
-                    Tippe die gewünschte Nachricht in das Textfeld oben auf der Seite ein und klicke auf 'Nachricht erstellen'.
-                </div>
-                <div class="column">
-                    <b>Schritt 2:</b> Link verschicken
-                    Kopiere den Link, der dir daraufhin angezeigt wird und verschicke ihn an den gewünschten Gesprächspartner - z.B. via Facebook oder WhatsApp.
-                </div>
-                <div class="column">
-                    <b>Schritt 3:</b> Nachricht lesen
-                    Nun klickt der Gesprächspartner auf den Link und kann die Nachricht ein einziges Mal lesen, da diese sich daraufhin selbst zerstört.
-                </div>
+                <div class="column">@lang('frontpage.step1')</div>
+                <div class="column">@lang('frontpage.step2')</div>
+                <div class="column">@lang('frontpage.step3')</div>
             </div>
         </div>
     </div>

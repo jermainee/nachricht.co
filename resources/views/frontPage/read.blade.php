@@ -8,7 +8,7 @@
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
                             <textarea class="frontPage__messageField frontPage__messageField--no-resize" name="message" readonly>{{$message}}</textarea>
-                            <a href="/" class="button is-primary is-fullwidth has-text-weight-bold">Neue Nachricht</a>
+                            <a href="/" class="button is-primary is-fullwidth has-text-weight-bold">{{ trans('frontpage.createNew') }}</a>
                         </form>
                     </div>
                 </div>
@@ -17,8 +17,4 @@
 
         @include('frontPage.content')
     </div>
-@endsection
-
-@section('javascript')
-    <script src="/js/app.js"></script>
 @endsection
