@@ -9002,8 +9002,11 @@ label.panel-block:hover {
 .frontPage__messageField {
   resize: vertical;
 }
-.frontPage__messageField--no-resize {
+.frontPage__messageField--readonly {
   resize: none;
+}
+.frontPage__messageField, .frontPage__messageField:hover {
+  border: none;
 }
 .frontPage__messageField:not([rows]) {
   min-height: 35vh;

@@ -22,7 +22,7 @@
 
                         @include('components.ads')
 
-                        <div class="control has-icons-left has-margin-bottom has-margin-top">
+                        <div class="control has-margin-bottom has-margin-top">
                             <input id="messageLink" class="input" type="text" readonly/>
                         </div>
 

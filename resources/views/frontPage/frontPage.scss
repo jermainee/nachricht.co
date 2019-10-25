@@ -4,8 +4,12 @@
         @extend .has-margin-bottom;
         resize: vertical;
 
-        &--no-resize {
+        &--readonly {
             resize: none;
+        }
+
+        &, &:hover {
+            border: none;
         }
 
         &:not([rows]) {
