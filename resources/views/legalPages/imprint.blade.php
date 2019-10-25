@@ -4,6 +4,10 @@
     Datenschutz
 @endsection
 
+@section('metatags')
+    <meta name="robots" content="noindex"/>
+@endsection
+
 @section('content')
     <section class="hero is-primary">
         <div class="hero-body">

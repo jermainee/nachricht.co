@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         @yield('metatags')
         <link href="{{ asset('css/app.css') }}" rel="stylesheet"/>
-        <link rel="canonical" href="https://nachricht.co{{ Request::path() === '/' ? '' : Request::path() }}" />
+        <link rel="canonical" href="https://nachricht.co/{{ Request::path() === '/' ? '' : Request::path() }}" />
         @include('components.analytics')
     </head>
     <body>
