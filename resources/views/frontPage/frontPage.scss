@@ -13,6 +13,13 @@
         }
     }
 
+    &__icon {
+        @extend .image;
+        @extend .is-48x48;
+        @extend .is-marginless;
+        padding-top: $global-padding / 2;
+    }
+
     &__knownFrom {
         display: flex;
         overflow-x: scroll;

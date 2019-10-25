@@ -18,15 +18,45 @@
                 <a class="navbar-item" href="/">
                     <img src="/images/logo.png" height="25"/>
                 </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
             </div>
 
-            <div id="navigation" class="navbar-menu">
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        @php $locale = session()->get('locale'); @endphp
+                        <a class="navbar-link">
+                            @switch($locale)
+                                @case('en')
+                                    <img src="/images/languages/en.svg" class="navbar__language" alt="English"/> English
+                                    @break
+                                @case('es')
+                                    <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/> Spanish
+                                    @break
+                                @case('ru')
+                                    <img src="/images/languages/ru.svg" class="navbar__language" alt="Russian"/> Russian
+                                    @break
+                                @default
+                                    <img src="/images/languages/de.svg" class="navbar__language" alt="Deutsch"/> Deutsch
+                            @endswitch
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/lang/de">
+                                <img src="/images/languages/de.svg" class="navbar__language" alt="Deutsch"/> Deutsch
+                            </a>
+                            <a class="navbar-item" href="/lang/en">
+                                <img src="/images/languages/en.svg" class="navbar__language" alt="English"/> English
+                            </a>
+                            <a class="navbar-item"  href="/lang/es">
+                                <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/> Spanish
+                            </a>
+                            <a class="navbar-item"  href="/lang/ru">
+                                <img src="/images/languages/ru.svg" class="navbar__language" alt="Russian"/> Russian
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 @if (Route::has('login'))
                 <div class="navbar-end">
                     <div class="navbar-item">

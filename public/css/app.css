@@ -125,23 +125,39 @@
   width: 1em;
 }
 
-.hero-video, .modal-background, .modal, .image.is-square img,
-.image.is-square .has-ratio, .image.is-1by1 img,
-.image.is-1by1 .has-ratio, .image.is-5by4 img,
-.image.is-5by4 .has-ratio, .image.is-4by3 img,
-.image.is-4by3 .has-ratio, .image.is-3by2 img,
-.image.is-3by2 .has-ratio, .image.is-5by3 img,
-.image.is-5by3 .has-ratio, .image.is-16by9 img,
-.image.is-16by9 .has-ratio, .image.is-2by1 img,
-.image.is-2by1 .has-ratio, .image.is-3by1 img,
-.image.is-3by1 .has-ratio, .image.is-4by5 img,
-.image.is-4by5 .has-ratio, .image.is-3by4 img,
-.image.is-3by4 .has-ratio, .image.is-2by3 img,
-.image.is-2by3 .has-ratio, .image.is-3by5 img,
-.image.is-3by5 .has-ratio, .image.is-9by16 img,
-.image.is-9by16 .has-ratio, .image.is-1by2 img,
-.image.is-1by2 .has-ratio, .image.is-1by3 img,
-.image.is-1by3 .has-ratio, .is-overlay {
+.hero-video, .modal-background, .modal, .image.is-square img, .is-square.frontPage__icon img,
+.image.is-square .has-ratio,
+.is-square.frontPage__icon .has-ratio, .image.is-1by1 img, .is-1by1.frontPage__icon img,
+.image.is-1by1 .has-ratio,
+.is-1by1.frontPage__icon .has-ratio, .image.is-5by4 img, .is-5by4.frontPage__icon img,
+.image.is-5by4 .has-ratio,
+.is-5by4.frontPage__icon .has-ratio, .image.is-4by3 img, .is-4by3.frontPage__icon img,
+.image.is-4by3 .has-ratio,
+.is-4by3.frontPage__icon .has-ratio, .image.is-3by2 img, .is-3by2.frontPage__icon img,
+.image.is-3by2 .has-ratio,
+.is-3by2.frontPage__icon .has-ratio, .image.is-5by3 img, .is-5by3.frontPage__icon img,
+.image.is-5by3 .has-ratio,
+.is-5by3.frontPage__icon .has-ratio, .image.is-16by9 img, .is-16by9.frontPage__icon img,
+.image.is-16by9 .has-ratio,
+.is-16by9.frontPage__icon .has-ratio, .image.is-2by1 img, .is-2by1.frontPage__icon img,
+.image.is-2by1 .has-ratio,
+.is-2by1.frontPage__icon .has-ratio, .image.is-3by1 img, .is-3by1.frontPage__icon img,
+.image.is-3by1 .has-ratio,
+.is-3by1.frontPage__icon .has-ratio, .image.is-4by5 img, .is-4by5.frontPage__icon img,
+.image.is-4by5 .has-ratio,
+.is-4by5.frontPage__icon .has-ratio, .image.is-3by4 img, .is-3by4.frontPage__icon img,
+.image.is-3by4 .has-ratio,
+.is-3by4.frontPage__icon .has-ratio, .image.is-2by3 img, .is-2by3.frontPage__icon img,
+.image.is-2by3 .has-ratio,
+.is-2by3.frontPage__icon .has-ratio, .image.is-3by5 img, .is-3by5.frontPage__icon img,
+.image.is-3by5 .has-ratio,
+.is-3by5.frontPage__icon .has-ratio, .image.is-9by16 img, .is-9by16.frontPage__icon img,
+.image.is-9by16 .has-ratio,
+.is-9by16.frontPage__icon .has-ratio, .image.is-1by2 img, .is-1by2.frontPage__icon img,
+.image.is-1by2 .has-ratio,
+.is-1by2.frontPage__icon .has-ratio, .image.is-1by3 img, .is-1by3.frontPage__icon img,
+.image.is-1by3 .has-ratio,
+.is-1by3.frontPage__icon .has-ratio, .is-overlay {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -1292,7 +1308,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
     visibility: hidden !important;
   }
 }
-.is-marginless {
+.is-marginless, .frontPage__icon {
   margin: 0 !important;
 }
 
@@ -2637,111 +2653,127 @@ a.box:active {
   width: 3rem;
 }
 
-.image {
+.image, .frontPage__icon {
   display: block;
   position: relative;
 }
-.image img {
+.image img, .frontPage__icon img {
   display: block;
   height: auto;
   width: 100%;
 }
-.image img.is-rounded {
+.image img.is-rounded, .frontPage__icon img.is-rounded {
   border-radius: 290486px;
 }
-.image.is-fullwidth {
+.image.is-fullwidth, .is-fullwidth.frontPage__icon {
   width: 100%;
 }
-.image.is-square img,
-.image.is-square .has-ratio, .image.is-1by1 img,
-.image.is-1by1 .has-ratio, .image.is-5by4 img,
-.image.is-5by4 .has-ratio, .image.is-4by3 img,
-.image.is-4by3 .has-ratio, .image.is-3by2 img,
-.image.is-3by2 .has-ratio, .image.is-5by3 img,
-.image.is-5by3 .has-ratio, .image.is-16by9 img,
-.image.is-16by9 .has-ratio, .image.is-2by1 img,
-.image.is-2by1 .has-ratio, .image.is-3by1 img,
-.image.is-3by1 .has-ratio, .image.is-4by5 img,
-.image.is-4by5 .has-ratio, .image.is-3by4 img,
-.image.is-3by4 .has-ratio, .image.is-2by3 img,
-.image.is-2by3 .has-ratio, .image.is-3by5 img,
-.image.is-3by5 .has-ratio, .image.is-9by16 img,
-.image.is-9by16 .has-ratio, .image.is-1by2 img,
-.image.is-1by2 .has-ratio, .image.is-1by3 img,
-.image.is-1by3 .has-ratio {
+.image.is-square img, .is-square.frontPage__icon img,
+.image.is-square .has-ratio,
+.is-square.frontPage__icon .has-ratio, .image.is-1by1 img, .is-1by1.frontPage__icon img,
+.image.is-1by1 .has-ratio,
+.is-1by1.frontPage__icon .has-ratio, .image.is-5by4 img, .is-5by4.frontPage__icon img,
+.image.is-5by4 .has-ratio,
+.is-5by4.frontPage__icon .has-ratio, .image.is-4by3 img, .is-4by3.frontPage__icon img,
+.image.is-4by3 .has-ratio,
+.is-4by3.frontPage__icon .has-ratio, .image.is-3by2 img, .is-3by2.frontPage__icon img,
+.image.is-3by2 .has-ratio,
+.is-3by2.frontPage__icon .has-ratio, .image.is-5by3 img, .is-5by3.frontPage__icon img,
+.image.is-5by3 .has-ratio,
+.is-5by3.frontPage__icon .has-ratio, .image.is-16by9 img, .is-16by9.frontPage__icon img,
+.image.is-16by9 .has-ratio,
+.is-16by9.frontPage__icon .has-ratio, .image.is-2by1 img, .is-2by1.frontPage__icon img,
+.image.is-2by1 .has-ratio,
+.is-2by1.frontPage__icon .has-ratio, .image.is-3by1 img, .is-3by1.frontPage__icon img,
+.image.is-3by1 .has-ratio,
+.is-3by1.frontPage__icon .has-ratio, .image.is-4by5 img, .is-4by5.frontPage__icon img,
+.image.is-4by5 .has-ratio,
+.is-4by5.frontPage__icon .has-ratio, .image.is-3by4 img, .is-3by4.frontPage__icon img,
+.image.is-3by4 .has-ratio,
+.is-3by4.frontPage__icon .has-ratio, .image.is-2by3 img, .is-2by3.frontPage__icon img,
+.image.is-2by3 .has-ratio,
+.is-2by3.frontPage__icon .has-ratio, .image.is-3by5 img, .is-3by5.frontPage__icon img,
+.image.is-3by5 .has-ratio,
+.is-3by5.frontPage__icon .has-ratio, .image.is-9by16 img, .is-9by16.frontPage__icon img,
+.image.is-9by16 .has-ratio,
+.is-9by16.frontPage__icon .has-ratio, .image.is-1by2 img, .is-1by2.frontPage__icon img,
+.image.is-1by2 .has-ratio,
+.is-1by2.frontPage__icon .has-ratio, .image.is-1by3 img, .is-1by3.frontPage__icon img,
+.image.is-1by3 .has-ratio,
+.is-1by3.frontPage__icon .has-ratio {
   height: 100%;
   width: 100%;
 }
-.image.is-square, .image.is-1by1 {
+.image.is-square, .is-square.frontPage__icon, .image.is-1by1, .is-1by1.frontPage__icon {
   padding-top: 100%;
 }
-.image.is-5by4 {
+.image.is-5by4, .is-5by4.frontPage__icon {
   padding-top: 80%;
 }
-.image.is-4by3 {
+.image.is-4by3, .is-4by3.frontPage__icon {
   padding-top: 75%;
 }
-.image.is-3by2 {
+.image.is-3by2, .is-3by2.frontPage__icon {
   padding-top: 66.6666%;
 }
-.image.is-5by3 {
+.image.is-5by3, .is-5by3.frontPage__icon {
   padding-top: 60%;
 }
-.image.is-16by9 {
+.image.is-16by9, .is-16by9.frontPage__icon {
   padding-top: 56.25%;
 }
-.image.is-2by1 {
+.image.is-2by1, .is-2by1.frontPage__icon {
   padding-top: 50%;
 }
-.image.is-3by1 {
+.image.is-3by1, .is-3by1.frontPage__icon {
   padding-top: 33.3333%;
 }
-.image.is-4by5 {
+.image.is-4by5, .is-4by5.frontPage__icon {
   padding-top: 125%;
 }
-.image.is-3by4 {
+.image.is-3by4, .is-3by4.frontPage__icon {
   padding-top: 133.3333%;
 }
-.image.is-2by3 {
+.image.is-2by3, .is-2by3.frontPage__icon {
   padding-top: 150%;
 }
-.image.is-3by5 {
+.image.is-3by5, .is-3by5.frontPage__icon {
   padding-top: 166.6666%;
 }
-.image.is-9by16 {
+.image.is-9by16, .is-9by16.frontPage__icon {
   padding-top: 177.7777%;
 }
-.image.is-1by2 {
+.image.is-1by2, .is-1by2.frontPage__icon {
   padding-top: 200%;
 }
-.image.is-1by3 {
+.image.is-1by3, .is-1by3.frontPage__icon {
   padding-top: 300%;
 }
-.image.is-16x16 {
+.image.is-16x16, .is-16x16.frontPage__icon {
   height: 16px;
   width: 16px;
 }
-.image.is-24x24 {
+.image.is-24x24, .is-24x24.frontPage__icon {
   height: 24px;
   width: 24px;
 }
-.image.is-32x32 {
+.image.is-32x32, .is-32x32.frontPage__icon {
   height: 32px;
   width: 32px;
 }
-.image.is-48x48 {
+.image.is-48x48, .image.frontPage__icon, .frontPage__icon {
   height: 48px;
   width: 48px;
 }
-.image.is-64x64 {
+.image.is-64x64, .is-64x64.frontPage__icon {
   height: 64px;
   width: 64px;
 }
-.image.is-96x96 {
+.image.is-96x96, .is-96x96.frontPage__icon {
   height: 96px;
   width: 96px;
 }
-.image.is-128x128 {
+.image.is-128x128, .is-128x128.frontPage__icon {
   height: 128px;
   width: 128px;
 }
@@ -8961,6 +8993,11 @@ label.panel-block:hover {
 .navbar {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
 }
+.navbar__language {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+}
 
 .frontPage__messageField {
   resize: vertical;
@@ -8970,6 +9007,9 @@ label.panel-block:hover {
 }
 .frontPage__messageField:not([rows]) {
   min-height: 35vh;
+}
+.frontPage__icon {
+  padding-top: 0.5rem;
 }
 .frontPage__knownFrom {
   display: flex;

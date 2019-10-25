@@ -1,3 +1,9 @@
 .navbar {
     box-shadow: $box-shadow;
+
+    &__language {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: $global-margin / 2;
+    }
 }

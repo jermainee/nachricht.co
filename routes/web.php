@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+Route::get('lang/{locale}', 'LanguageController@update');
+
 Route::get('/', function () {
     return view('frontPage.frontPage');
 });
