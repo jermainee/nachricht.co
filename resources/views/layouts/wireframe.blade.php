@@ -11,6 +11,7 @@
         @yield('metatags')
         <link href="{{ asset('css/app.css') }}" rel="stylesheet"/>
         <link rel="canonical" href="https://nachricht.co{{ Request::path() === '/' ? '' : Request::path() }}" />
+        @include('components.analytics')
     </head>
     <body>
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">

@@ -45,10 +45,15 @@
         const cookieConsentDisagree = document.getElementById('cookieConsentDisagree');
 
         const cookieConsentDecision = localStorage.getItem('cookieConsent');
+        const cookieConsentTimestamp = localStorage.getItem('cookieConsentTimestamp');
         if (cookieConsentDecision) {
-            if (cookieConsentDecision === 'disagree') {
+            if (cookieConsentDecision === 'disagree'
+                && cookieConsentTimestamp
+                && (Date.now() - parseInt(cookieConsentTimestamp)) > 59200000000
+            ) {
                 localStorage.removeItem('cookieConsent');
             }
+
             setConsentCookie(cookieConsentDecision);
             return;
         }
@@ -57,13 +62,17 @@
 
         cookieConsentAgree.addEventListener('click', () => {
             cookieConsent.classList.remove('is-active');
+            setConsentCookie('agree');
             window.localStorage.setItem('cookieConsent', 'agree');
+            window.localStorage.setItem('cookieConsentTimestamp', null);
             document.location.reload(true);
         });
 
         cookieConsentDisagree.addEventListener('click', () => {
             cookieConsent.classList.remove('is-active');
+            setConsentCookie('disagree');
             window.localStorage.setItem('cookieConsent', 'disagree');
+            window.localStorage.setItem('cookieConsentTimestamp', Date.now().toString());
             document.location.reload(true);
         });
     });
