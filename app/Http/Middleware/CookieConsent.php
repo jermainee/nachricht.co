@@ -17,10 +17,9 @@ class CookieConsent
     {
     	$cookie = $request->cookie('cookieConsent');
 
-    	if ($cookie && $cookie === 'agree') {
-    		session(['cookieConsent' => true]);
+    	if (!empty($cookie)) {
+    		session(['cookieConsent' => $cookie === 'agree']);
 	    }
-
 
         return $next($request);
     }
