@@ -40,19 +40,30 @@
                 </div>
             </div>
 
-            <button class="button is-primary is-fullwidth has-text-weight-bold has-margin-top" onclick="location.reload(true)">{{ trans('adblock.reloadButton') }}</button>
+            <button id="adbAgree" class="button is-primary is-fullwidth has-text-weight-bold has-margin-top">
+                {{ trans('adblock.reloadButton') }}
+            </button>
         </div>
     </div>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        const adbAgree = document.getElementById('adbAgree');
+
         const cookieConsentDecision = localStorage.getItem('cookieConsent');
         if (!cookieConsentDecision) {
             return;
         }
 
         if(window.hasAds !== true){
+            adbAgree.addEventListener('click', () => {
+                setConsentCookie('agree');
+                window.localStorage.setItem('cookieConsent', 'agree');
+                window.localStorage.setItem('cookieConsentTimestamp', null);
+                location.reload(true);
+            });
+
             const adbModal = document.getElementById('<?= $randomId ?>');
             adbModal.classList.add('is-active');
         }

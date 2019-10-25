@@ -100,7 +100,9 @@
                 <p><strong>Nachricht.co</strong>, seit 2014 für dich da.</p>
             </div>
         </footer>
+        <?php if(\App\Http\Util\CookieConsentUtil::isAgreed()): ?>
         <script src="/js/ads.js"></script>
+        <?php endif; ?>
         @include('components.adblock')
         @include('components.consent')
         @yield('javascript')

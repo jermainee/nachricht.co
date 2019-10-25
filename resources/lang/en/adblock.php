@@ -9,5 +9,5 @@ return [
 	'servers' => 'server rental',
 	'help' => 'Your support',
 
-	'reloadButton' => 'Reload page',
+	'reloadButton' => 'Reload page & agree cookies',
 ];

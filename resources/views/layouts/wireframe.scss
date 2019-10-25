@@ -12,3 +12,11 @@
 .modal {
     z-index: 1;
 }
+
+#cookieSettingsButton {
+    position: fixed;
+    bottom: $global-padding / 2;
+    right: $global-padding;
+    border-radius: $global-radius 0 0 $global-radius;
+    background-color: transparent;
+}

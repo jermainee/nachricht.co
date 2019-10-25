@@ -9,5 +9,5 @@ return [
 	'servers' => 'Servermiete',
 	'help' => 'Deine Unterstützung',
 
-	'reloadButton' => 'Seite neu laden',
+	'reloadButton' => 'Seite neu laden & Cookies akzeptieren',
 ];

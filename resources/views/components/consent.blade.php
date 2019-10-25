@@ -38,11 +38,27 @@
     </div>
 </div>
 
+<a id="cookieSettingsButton">
+    <span class="is-hidden-mobile has-text-weight-bold has-text-grey">
+        {{ trans('consent.consent') }}
+    </span>
+     <span class="icon is-normal">
+        <img src="/images/icons/cookie.svg" alt="{{ trans('consent.consentText') }}"/>
+    </span>
+</a>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        const cookieSettingsButton = document.getElementById('cookieSettingsButton');
         const cookieConsent = document.getElementById('cookieConsent');
         const cookieConsentAgree = document.getElementById('cookieConsentAgree');
         const cookieConsentDisagree = document.getElementById('cookieConsentDisagree');
+
+        cookieSettingsButton.addEventListener('click', () => {
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentTimestamp');
+            location.reload(true);
+        });
 
         const cookieConsentDecision = localStorage.getItem('cookieConsent');
         const cookieConsentTimestamp = localStorage.getItem('cookieConsentTimestamp');
