@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="column">
-                                <a class="button is-primary is-fullwidth has-text-weight-bold">
+                                <a id="copyLink" class="button is-primary is-fullwidth has-text-weight-bold">
                                     <span class="is-hidden-mobile">{{ trans('frontpage.copyButton') }}</span>
                                     <span class="icon">
                                         <img src="/images/icons/copy.svg" alt="{{ trans('frontpage.copyButton') }}" />

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const messageLink = document.getElementById('messageLink');
     const shareWhatsApp = document.getElementById('shareWhatsApp');
     const shareTelegram = document.getElementById('shareTelegram');
+    const copyLink = document.getElementById('copyLink');
 
     messageForm.addEventListener('submit', event => {
         event.preventDefault();
@@ -33,5 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 linkForm.classList.remove('is-hidden');
                 messageForm.parentElement.classList.add('is-hidden');
             });
+    });
+
+    copyLink.addEventListener('click', () => {
+        messageLink.select();
+        document.execCommand('copy');
+        copyLink.innerHTML = '<span class="icon"><img src="/images/icons/check-white.svg" /></span>';
     });
 });
