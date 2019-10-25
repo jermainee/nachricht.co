@@ -38,7 +38,7 @@ class MessageController extends Controller
 		$message->updated_at = $dateTime;
 		$message->save();
 
-		$link = 'https://nachricht.co.test/' . $message->uid . '_' . $encryptionKey;
+		$link = 'https://nachricht.co/' . $message->uid . '_' . $encryptionKey;
 
 		return Response::json([
 			'success' => true,
