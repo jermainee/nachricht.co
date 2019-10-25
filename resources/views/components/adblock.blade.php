@@ -15,7 +15,7 @@
                 Doch um Nachricht.co am Leben zu halten müssen wir monatlich Geld in Dinge wie zum Beispiel angemietete Server investieren.
                 Desweiteren stecken wir unser Herzblut in Form von Programmierung, Übersetzung und Support in dieses Projekt.
             </p>
-            <p class="has-margin-bottom">
+            <p class="has-margin-bottom has-text-weight-bold">
                 Wenn du unsere Arbeit und Nachricht.co unterstützen möchtest, dann deaktiviere bitte deinen AdBlocker auf unserer Seite! 😊
             </p>
 
@@ -54,7 +54,9 @@
             return;
         }
 
-        const adbModal = document.getElementById('<?= $randomId ?>');
-        adbModal.classList.add('is-active');
+        if(window.hasAds !== true){
+            const adbModal = document.getElementById('<?= $randomId ?>');
+            adbModal.classList.add('is-active');
+        }
     });
 </script>

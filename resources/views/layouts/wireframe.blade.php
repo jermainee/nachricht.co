@@ -100,7 +100,7 @@
                 <p><strong>Nachricht.co</strong>, seit 2014 für dich da.</p>
             </div>
         </footer>
-
+        <script src="/js/ads.js"></script>
         @include('components.adblock')
         @include('components.consent')
         @yield('javascript')

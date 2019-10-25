@@ -1,0 +1,1 @@
+var hasAds = true;
