@@ -31,14 +31,20 @@ class MessageController extends Controller
 		$dateTime = new \DateTime();
 		$message = new Message();
 		$message->uid = $this->generateId(16);
-		$message->message = base64_encode($this->encryptMessage($request->input('message'), $encryptionKey, $iv));
+		$message->message = base64_encode(
+			$this->encryptMessage(
+				htmlspecialchars($request->input('message')),
+				$encryptionKey,
+				$iv
+			)
+		);
 		$message->password = !empty($request->input('password')) ? Hash::make($request->input('password')) : null;
 		$message->iv = base64_encode($iv);
 		$message->created_at = $dateTime;
 		$message->updated_at = $dateTime;
 		$message->save();
 
-		$link = 'https://nachricht.co/' . $message->uid . '_' . $encryptionKey;
+		$link = 'https://nachricht.co.test/' . $message->uid . '_' . $encryptionKey;
 
 		return Response::json([
 			'success' => true,
@@ -108,7 +114,7 @@ class MessageController extends Controller
 		]);
 
 		return view('frontPage.read', [
-			'message' => $decryptedMessage
+			'message' => $this->renderHyperlinks($decryptedMessage)
 		]);
 	}
 
@@ -142,6 +148,14 @@ class MessageController extends Controller
 		$ivlen = openssl_cipher_iv_length($cipher);
 
 		return openssl_random_pseudo_bytes($ivlen);
+	}
+
+	private function renderHyperlinks(string $message): string
+	{
+		$url = '@(http(s)?)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@';
+		$message = preg_replace($url, '<a href="http$2://$4" target="_blank" rel="noopener nofollow" title="$0">$0</a>', $message);
+
+		return $message;
 	}
 
 	private function noCacheHeaders(): void

@@ -19,7 +19,7 @@
 
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
-                            <textarea class="frontPage__messageField frontPage__messageField--readonly" name="message" readonly>{{$message}}</textarea>
+                            <div class="frontPage__messageField frontPage__messageField--readonly has-text-left">{!! $message !!}</div>
                             <a href="/" class="button is-primary is-fullwidth has-text-weight-bold">{{ trans('frontpage.createNew') }}</a>
                         </form>
                     </div>
