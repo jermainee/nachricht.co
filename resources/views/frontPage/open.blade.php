@@ -1,7 +1,7 @@
 @extends('layouts.wireframe')
 
 @section('title')
-    Nachricht ansehen
+    Nachricht öffnen
 @endsection
 
 @section('metatags')
@@ -18,10 +18,11 @@
                     </div>
 
                     <div class="box">
-                        <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
-                            <textarea class="frontPage__messageField frontPage__messageField--readonly" name="message" readonly>{{$message}}</textarea>
-                            <a href="/" class="button is-primary is-fullwidth has-text-weight-bold">{{ trans('frontpage.createNew') }}</a>
-                        </form>
+                        <p class="is-size-5 is-marginless">@lang('frontpage.openText')</p>
+
+                        @include('components.ads')
+
+                        <a href="/n" class="button is-primary is-fullwidth has-text-weight-bold  has-margin-top">{{ trans('frontpage.openButton') }}</a>
                     </div>
                 </div>
             </div>

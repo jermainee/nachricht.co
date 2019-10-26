@@ -2,28 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 
+// locale
 Route::get('lang/{locale}', 'LanguageController@update');
 
+// message
 Route::get('/', function () {
     return view('frontPage.frontPage');
 });
-Route::get('/{uid}_{key}', function ($uid, $key) {
-	session([
-		'uid' => $uid,
-		'key' => $key,
-	]);
-
-	return redirect('/n');
-});
+Route::get('/{uid}_{key}','MessageController@open');
 Route::get('/n', 'MessageController@read');
 
+// pages
+Route::get('/faq', function () {
+	return view('faq.faq');
+});
+
+// legal pages
 Route::get('/datenschutz', function () {
 	return view('legalPages.privacy');
 });
 Route::get('/impressum', function () {
 	return view('legalPages.imprint');
-});
-
-Route::get('/faq', function () {
-	return view('faq.faq');
 });

@@ -11,7 +11,7 @@
 
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
-                            <textarea class="frontPage__messageField" name="message" placeholder="{{ trans('frontpage.messagePlaceholder') }}" autofocus></textarea>
+                            <textarea class="frontPage__messageField" name="message" placeholder="{{ trans('frontpage.messagePlaceholder') }}" autocomplete="off" autofocus></textarea>
                             <input class="input has-margin-bottom" name="password" type="password" placeholder="{{ trans('frontpage.passwordPlaceholder') }}"/>
                             <button class="button is-primary is-fullwidth has-text-weight-bold">{{ trans('frontpage.createButton') }}</button>
                         </form>
@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        @include('frontPage.content')
+        @include('frontPage.components.content')
     </div>
 @endsection
 

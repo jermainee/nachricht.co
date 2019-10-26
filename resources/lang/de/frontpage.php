@@ -4,9 +4,13 @@ return [
 	'messagePlaceholder' => 'Tippe hier deine Nachricht ein ...',
 	'passwordPlaceholder' => 'Passwort (optional) ...',
 	'createButton' => 'Nachricht erstellen',
+
 	'copyButton' => 'Link kopieren',
 	'copyText' => 'Kopiere den Link und sende ihn wem du möchtest.<br/>Die erstellte Nachricht wird gelöscht, nachdem sie das erste Mal geöffnet wurde.',
 	'createNew' => 'Neue Nachricht',
+
+	'openText' => 'Die Nachricht kann nur ein Mal geöffnet werden und zerstört sich danach selbst!',
+	'openButton' => 'Nachricht öffnen',
 
 	'welcome' => 'Was ist Nachricht.co?',
 	'welcomeText' => 'Mit Nachricht.co kannst du sich selbstzerstörende und verschlüsselte Einweg-Nachrichten über das Internet verschicken. Du musst nichtmal auf den Messenger oder das soziale Netzwerk deiner Wahl verzichten. Unabhängig, sicher und kostenlos!',

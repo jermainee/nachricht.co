@@ -50,18 +50,30 @@ class MessageController extends Controller
 		]);
     }
 
+	public function open(string $uid, string $key)
+	{
+		$this->noCacheHeaders();
+		session(['uid' => $uid, 'key' => $key]);
+
+		/** @var Message|null $message */
+		$message = Message::where('uid', $uid)->first();
+		if ($message === null) {
+			return Response::redirectTo('/');
+		}
+
+		return view('frontPage.open');
+    }
+
 	public function read()
 	{
+		$this->noCacheHeaders();
 		$uid = session('uid');
 		$key = session('key');
 		if (empty($uid) || empty($key)) {
 			return Response::redirectTo('/');
 		}
 
-		session([
-			'uid' => null,
-			'key' => null,
-		]);
+		session(['uid' => null, 'key' => null]);
 
 		/** @var Message|null $message */
 		$message = Message::where('uid', $uid)->first();
@@ -116,5 +128,12 @@ class MessageController extends Controller
 		$ivlen = openssl_cipher_iv_length($cipher);
 
 		return openssl_random_pseudo_bytes($ivlen);
+	}
+
+	private function noCacheHeaders(): void
+	{
+		header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+		header("Cache-Control: post-check=0, pre-check=0", false);
+		header("Pragma: no-cache");
 	}
 }
