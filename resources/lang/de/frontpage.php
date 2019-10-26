@@ -9,7 +9,9 @@ return [
 	'copyText' => 'Kopiere den Link und sende ihn wem du möchtest.<br/>Die erstellte Nachricht wird gelöscht, nachdem sie das erste Mal geöffnet wurde.',
 	'createNew' => 'Neue Nachricht',
 
-	'openText' => 'Die Nachricht kann nur ein Mal geöffnet werden und zerstört sich danach selbst!',
+	'openText' => 'Die Nachricht kann nur ein Mal geöffnet werden und zerstört sich danach selbst.',
+	'openWithPasswordText' => 'Zusätzlich wurde die Nachricht mit einem Passwort geschützt.',
+	'openPasswordPlaceholder' => 'Passwort eingeben ...',
 	'openButton' => 'Nachricht öffnen',
 
 	'welcome' => 'Was ist Nachricht.co?',

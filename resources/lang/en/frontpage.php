@@ -4,9 +4,15 @@ return [
 	'messagePlaceholder' => 'Type your message here ...',
 	'passwordPlaceholder' => 'Password (optional) ...',
 	'createButton' => 'Create message',
+
 	'copyButton' => 'Copy link',
 	'copyText' => 'Copy the link and send it to whomever you want.<br/>The created message will be deleted after it has been opened.',
 	'createNew' => 'New message',
+
+	'openText' => 'The message can only be opened once and then destroys itself.',
+	'openWithPasswordText' => 'Additionally this message was protected with a password.',
+	'openPasswordPlaceholder' => 'Enter password ...',
+	'openButton' => 'Open message',
 
 	'welcome' => 'What is Nachricht.co?',
 	'welcomeText' => 'With Nachricht.co you can send self-destructive and encrypted one-way messages over the Internet. You don\'t even need to miss out the messenger or social network of your choice. We are an independent, secure and fully free service!',

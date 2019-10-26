@@ -61,10 +61,12 @@ class MessageController extends Controller
 			return Response::redirectTo('/');
 		}
 
-		return view('frontPage.open');
+		return view('frontPage.open', [
+			'hasPassword' => !empty($message->password)
+		]);
     }
 
-	public function read()
+	public function read(Request $request)
 	{
 		$this->noCacheHeaders();
 		$uid = session('uid');
@@ -79,6 +81,18 @@ class MessageController extends Controller
 		$message = Message::where('uid', $uid)->first();
 		if ($message === null) {
 			return Response::redirectTo('/');
+		}
+
+		if (!empty($message->password)) {
+			if (!$request->isMethod('post') || empty($request->input('password'))) {
+				return Response::redirectTo('/' . $uid . '_' . $key);
+			}
+
+			if (!Hash::check($request->input('password'), $message->password)) {
+				// TODO: Implement anti brute force
+
+				return Response::redirectTo('/' . $uid . '_' . $key);
+			}
 		}
 
 		$decodedMassage = base64_decode($message->message);

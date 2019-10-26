@@ -11,6 +11,7 @@ Route::get('/', function () {
 });
 Route::get('/{uid}_{key}','MessageController@open');
 Route::get('/n', 'MessageController@read');
+Route::post('/n', 'MessageController@read');
 
 // pages
 Route::get('/faq', function () {
