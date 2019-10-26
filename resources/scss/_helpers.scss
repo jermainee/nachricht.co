@@ -2,8 +2,16 @@
     margin-top: $global-margin;
 }
 
+.has-margin-top-double {
+    margin-top: $global-margin * 2;
+}
+
 .has-margin-bottom {
     margin-bottom: $global-margin;
+}
+
+.has-margin-bottom-double {
+    margin-bottom: $global-margin * 2;
 }
 
 .has-padding-top {
@@ -12,4 +20,9 @@
 
 .has-padding-bottom {
     padding-bottom: $global-padding;
+}
+
+.smallContainer {
+    @extend .container;
+    max-width: 860px;
 }

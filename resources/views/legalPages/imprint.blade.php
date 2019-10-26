@@ -9,15 +9,15 @@
 @endsection
 
 @section('content')
-    <section class="hero is-primary">
+    <section class="hero is-primary has-text-centered">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title">Datenschutz</h1>
+                <h1 class="title">Impressum</h1>
             </div>
         </div>
     </section>
 
-    <div class="container has-margin-top has-margin-bottom">
+    <div class="smallContainer has-margin-top-double has-margin-bottom-double">
         <h2 style="margin-top: 0px;">Angaben gemäß § 5 TMG</h2>
         <p>Jermaine J. Ernst<br />Elisenstraße 13<br />48317 Drensteinfurt<br />kontakt [ at ] jermaine-ernst.de</p>
 
