@@ -17,10 +17,6 @@
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
                 <div class="container">
-                    <div class="has-padding-bottom">
-                        @include('components.ads')
-                    </div>
-
                     <div class="box">
                         <p class="is-size-5 is-marginless">
                             @lang('frontpage.openText')
