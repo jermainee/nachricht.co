@@ -17,6 +17,19 @@ Route::post('/n', 'MessageController@read');
 Route::get('/faq', function () {
 	return view('faq.faq');
 });
+Route::get('/faq/aes', function () {
+	return view('faq.subPages.aes');
+});
+Route::get('/faq/tls', function () {
+	return view('faq.subPages.tls');
+});
+Route::get('/aes', function () {
+	return redirect('/faq/aes', 301);
+});
+Route::get('/tls', function () {
+	return redirect('/faq/tls', 301);
+});
+
 
 // legal pages
 Route::get('/datenschutz', function () {

@@ -49,9 +49,9 @@
         <hr/>
 
         <h2 id="3">Wie werden die Nachrichten gespeichert?</h2>
-        <p>Alle Nachrichten werden mittels des Advanced Encryption Standart (kurz AES) und einem individuell generiertem, 256 Bit langem Schlüssel verschlüsselt und anschließend auf unserem Server gespeichert. Dieser Verschlüsselungsalgorithmus ist weiterverbreitet, gilt als einer der sichersten und ist für staatliche Dokumente mit höchster Geheimaltungsstufe zugelassen.</p>
+        <p>Alle Nachrichten werden mittels des <a href="/faq/aes" title="Advanced Encryption Standart (AES)">Advanced Encryption Standart (kurz AES)</a> und einem individuell generiertem, 256 Bit langem Schlüssel verschlüsselt und anschließend auf unserem Server gespeichert. Dieser Verschlüsselungsalgorithmus ist weiterverbreitet, gilt als einer der sichersten und ist für staatliche Dokumente mit höchster Geheimaltungsstufe zugelassen.</p>
         <p>Die jeweiligen Schlüssel werden nicht gespeichert und lediglich in codierter Form im erstellten Link an den Benutzer übergeben. Dieses Verfahren ermöglicht, dass nur der Besitzer des Links die Nachricht entschlüsseln kann.</p>
-        <p>Die Verbindung zwischen dir und unserem Server wird übrigens auch von uns Verschlüsselt und ist somit gegen Abhören und Manipulationen geschützt. Hierfür verwenden wir das Transport Layer Security Protocol - kurz TLS.</p>
+        <p>Die Verbindung zwischen dir und unserem Server wird übrigens auch von uns Verschlüsselt und ist somit gegen Abhören und Manipulationen geschützt. Hierfür verwenden wir das <a href="/faq/tls" title="Transport Layer Security Protocol (TLS)">Transport Layer Security Protocol - kurz TLS.</a></p>
 
         <hr/>
 
