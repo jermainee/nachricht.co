@@ -7,6 +7,18 @@
         height: 1.2rem;
         margin-right: $global-margin / 2;
     }
+
+    &__mobileLanguage {
+        @include from($tablet) {
+            display: none;
+        }
+
+        display: block;
+        height: 4rem;
+        width: 4rem;
+        margin-left: auto;
+        padding: 1.4rem;
+    }
 }
 
 .modal {

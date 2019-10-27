@@ -15,17 +15,33 @@
     </head>
     <body>
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            @php $locale = session()->get('locale'); @endphp
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
                     <img src="/images/logo.png" height="25"/>
                 </a>
+
+                <a id="mobileLanguageButton" role="button" class="navbar__mobileLanguage burger" aria-label="menu" aria-expanded="false">
+                    @switch($locale)
+                        @case('en')
+                        <img src="/images/languages/en.svg" class="navbar__language" alt="English"/>
+                        @break
+                        @case('es')
+                        <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/>
+                        @break
+                        @case('ru')
+                        <img src="/images/languages/ru.svg" class="navbar__language" alt="Russian"/>
+                        @break
+                        @default
+                        <img src="/images/languages/de.svg" class="navbar__language" alt="Deutsch"/>
+                    @endswitch
+                </a>
             </div>
 
-            <div class="navbar-menu">
+            <div id="mobileLanguageMenu" class="navbar-menu">
                 <div class="navbar-end">
                     <div class="navbar-item has-dropdown is-hoverable">
-                        @php $locale = session()->get('locale'); @endphp
-                        <a class="navbar-link">
+                        <a class="navbar-link is-hidden-mobile">
                             @switch($locale)
                                 @case('en')
                                     <img src="/images/languages/en.svg" class="navbar__language" alt="English"/> English
@@ -101,7 +117,7 @@
             </div>
         </footer>
         <?php if(\App\Http\Util\CookieConsentUtil::isAgreed()): ?>
-        <script src="/js/ads.js"></script>
+            <script src="/js/ads.js"></script>
         <?php endif; ?>
         @include('components.adblock')
         @include('components.consent')

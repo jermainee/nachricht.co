@@ -41,4 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.execCommand('copy');
         copyLink.innerHTML = '<span class="icon"><img src="/images/icons/check-white.svg" /></span>';
     });
+
+    const mobileLanguageButton = document.getElementById('mobileLanguageButton');
+    const mobileLanguageMenu = document.getElementById('mobileLanguageMenu');
+    mobileLanguageButton.addEventListener('click', () => {
+        mobileLanguageMenu.classList.toggle('is-block');
+    });
 });
