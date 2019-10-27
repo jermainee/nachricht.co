@@ -49,7 +49,7 @@
             @php $locale = session()->get('locale'); @endphp
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <img src="/images/logo.png" height="25"/>
+                    <img src="/images/logo.png" height="25" alt="Nachricht.co"/>
                 </a>
 
                 <a id="mobileLanguageButton" role="button" class="navbar__mobileLanguage burger" aria-label="menu" aria-expanded="false">
