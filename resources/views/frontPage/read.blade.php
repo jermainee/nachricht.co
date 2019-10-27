@@ -18,7 +18,9 @@
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
                 <div class="container">
-                    @include('components.ads')
+                    <div class="has-padding-bottom">
+                        @include('components.ads')
+                    </div>
 
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm">
