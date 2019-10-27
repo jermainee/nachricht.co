@@ -18,6 +18,7 @@
 <section class="hero is-light">
     <div class="hero-body">
         <div class="container">
+            <h1 class="is-hidden">Nachricht.co Die verschlüsselte Einweg-Nachricht</h1>
             <h2 class="has-text-centered is-hidden">Vorteile einer Einweg-Nachricht</h2>
 
             <div class="container has-text-left">
