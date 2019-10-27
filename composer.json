@@ -1,12 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "jermainee/nachricht.co",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Die verschlüsselte Einweg-Nachricht",
     "keywords": [
-        "framework",
-        "laravel"
+        "einweg-nachricht",
+        "nachricht",
+        "einweg"
     ],
-    "license": "MIT",
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
