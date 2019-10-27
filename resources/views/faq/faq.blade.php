@@ -22,6 +22,10 @@
     </section>
 
     <div class="smallContainer has-margin-top-double has-margin-bottom-double">
+        <div class="has-padding-bottom">
+            @include('components.ads')
+        </div>
+
         <h2>Inhalt</h2>
         <ol>
             <li><a href="#1" title="">Kann ich Nachricht.co kostenlos benutzen?</a></li>
