@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        @if (Request::path() === '/')
-            <title>Nachricht.co - Die verschlüsselte Einweg-Nachricht</title>
-        @else
-            <title>@yield('title') - Nachricht.co</title>
-        @endif
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        @yield('metatags')
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet"/>
+        @if (Request::path() === '/')
+            <title>Nachricht.co - Die verschlüsselte Einweg-Nachricht</title>
+            <meta name="description" content="Mit Nachricht.co kannst du völlig anonym und verschlüsselt eine sich selbstzerstörende Einweg-Nachricht per Link an deinen Gesprächspartner senden."/>
+            <meta property="og:title" content="Nachricht.co - Die verschlüsselte Einweg-Nachricht"/>
+            <meta property="og:description" content="Mit Nachricht.co kannst du völlig anonym und verschlüsselt eine sich selbstzerstörende Einweg-Nachricht per Link an deinen Gesprächspartner senden."/>
+            <meta property="og:site_name" content="Nachricht.co"/>
+            <meta property="og:url" content="https://nachricht.co"/>
+            <meta property="og:image" content=""/>
+        @else
+            <title>@yield('title') - Nachricht.co</title>
+            @yield('metatags')
+        @endif
+        <meta name="application-name" content="Nachricht.co"/>
+        <meta name="theme-color" content="#fff" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/images/appicons/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/images/appicons/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/images/appicons/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/images/appicons/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/images/appicons/mstile-310x310.png" />
+        <meta name="webutation-site-verification" content="webutation8f2544e8c2d2354f473c00eed107c837"/>
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/appicons/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/appicons/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/appicons/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/appicons/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/appicons/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/appicons/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/appicons/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/appicons/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/images/appicons/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/images/appicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/images/appicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/images/appicons/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/images/appicons/favicon-128.png" sizes="128x128" />
+        <link type="text/css" rel="stylesheet" media="screen" href="{{ asset('css/app.css') }}"/>
         <link rel="canonical" href="https://nachricht.co/{{ Request::path() === '/' ? '' : Request::path() }}" />
         @include('components.analytics')
     </head>

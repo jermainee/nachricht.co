@@ -4,6 +4,14 @@
     Häufig gestellte Fragen
 @endsection
 
+@section('metatags')
+    <meta name="description" content="Du hast Fragen zu Nachricht.co? Dann findest du hier die am häufigsten gestellen Fragen mit Antworten."/>
+    <meta property="og:title" content="Häufig gestellte Fragen - Nachricht.co"/>
+    <meta property="og:description" content="Du hast Fragen zu Nachricht.co? Dann findest du hier die am häufigsten gestellen Fragen mit Antworten."/>
+    <meta property="og:url" content="https://nachricht.co/faq"/>
+    <meta property="og:image" content=""/>
+@endsection
+
 @section('content')
     <section class="hero is-primary has-text-centered">
         <div class="hero-body">
