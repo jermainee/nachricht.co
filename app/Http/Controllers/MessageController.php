@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Response;
 
 class MessageController extends Controller
 {
+	private const OPEN_TIMEOUT_IN_SECONDS = 300; // 5 minutes
+
 	private const ALLOWED_REFERERS = [
 		'https://nachricht.co/',
 		'https://nachricht.co.test/',
@@ -59,7 +61,11 @@ class MessageController extends Controller
 	public function open(string $uid, string $key)
 	{
 		$this->noCacheHeaders();
-		session(['uid' => $uid, 'key' => $key]);
+		session([
+			'uid' => $uid,
+			'key' => $key,
+			'open_timestamp' => time(),
+		]);
 
 		/** @var Message|null $message */
 		$message = Message::where('uid', $uid)->first();
@@ -77,11 +83,21 @@ class MessageController extends Controller
 		$this->noCacheHeaders();
 		$uid = session('uid');
 		$key = session('key');
-		if (empty($uid) || empty($key)) {
+		$openTimestamp = session('open_timestamp');
+
+		if (empty($uid) || empty($key) || empty($openTimestamp)) {
 			return Response::redirectTo('/');
 		}
 
-		session(['uid' => null, 'key' => null]);
+		if ((time() - $openTimestamp) > self::OPEN_TIMEOUT_IN_SECONDS) {
+			return Response::redirectTo('/');
+		}
+
+		session([
+			'uid' => null,
+			'key' => null,
+			'open_timestamp' => null,
+		]);
 
 		/** @var Message|null $message */
 		$message = Message::where('uid', $uid)->first();
