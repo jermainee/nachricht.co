@@ -5,9 +5,7 @@
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
                 <div class="container">
-                    <div class="has-padding-bottom">
-                        @include('components.ads')
-                    </div>
+                    @include('components.ads')
 
                     <div class="box">
                         <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm" autocomplete="off">
