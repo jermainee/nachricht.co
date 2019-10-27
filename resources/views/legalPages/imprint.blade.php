@@ -1,7 +1,7 @@
 @extends('layouts.wireframe')
 
 @section('title')
-    Datenschutz
+    Impressum
 @endsection
 
 @section('metatags')
