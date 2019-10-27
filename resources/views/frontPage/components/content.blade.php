@@ -104,7 +104,7 @@
 
                 <div class="frontPage__knownLogo">
                     <a href="http://www.taiber-unternehmensberatung.de/" rel="noopener" target="_blank">
-                        <img class="image" src="/images/known/rogertaiber.png" alt="Mädchen.de" />
+                        <img class="image" src="/images/known/rogertaiber.png" alt="taiber-unternehmensberatung.de" />
                     </a>
                 </div>
 
