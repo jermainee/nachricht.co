@@ -61,7 +61,7 @@
                         <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/>
                         @break
                         @case('ru')
-                        <img src="/images/languages/ru.svg" class="navbar__language" alt="Russian"/>
+                        <img src="/images/languages/ru.svg" class="navbar__language" alt="русский"/>
                         @break
                         @default
                         <img src="/images/languages/de.svg" class="navbar__language" alt="Deutsch"/>
@@ -81,7 +81,7 @@
                                     <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/> Spanish
                                     @break
                                 @case('ru')
-                                    <img src="/images/languages/ru.svg" class="navbar__language" alt="Russian"/> Russian
+                                    <img src="/images/languages/ru.svg" class="navbar__language" alt="русский"/> русский
                                     @break
                                 @default
                                     <img src="/images/languages/de.svg" class="navbar__language" alt="Deutsch"/> Deutsch
@@ -99,7 +99,7 @@
                                 <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/> Spanish
                             </a>-->
                             <a class="navbar-item"  href="/lang/ru">
-                                <img src="/images/languages/ru.svg" class="navbar__language" alt="Russian"/> Russian
+                                <img src="/images/languages/ru.svg" class="navbar__language" alt="русский"/> русский
                             </a>
                         </div>
                     </div>
