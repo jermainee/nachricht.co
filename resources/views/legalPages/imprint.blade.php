@@ -30,8 +30,7 @@
         <h2>Urheberrecht</h2>
         <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
 
-        <p>Quellverweis: <a rel="nofollow" href="http://www.e-recht24.de/muster-disclaimer.html" target="_blank">eRecht24</a></p>
-        <p>Quellverweis (Vorschaugrafiken): <a rel="nofollow" href="http://uifest.com" target="_blank">UI.Fest</a></p>
-        <p>Quellverweis (Icons): <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+        <p>Quelle: <a rel="nofollow" href="http://www.e-recht24.de/muster-disclaimer.html" target="_blank">eRecht24</a></p>
+        <p>Quelle (Icons): <a href="http://www.flaticon.com" title="Flaticon" rel="nofollow">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
     </div>
 @endsection
