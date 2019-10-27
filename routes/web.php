@@ -30,7 +30,6 @@ Route::get('/tls', function () {
 	return redirect('/faq/tls', 301);
 });
 
-
 // legal pages
 Route::get('/datenschutz', function () {
 	return view('legalPages.privacy');
