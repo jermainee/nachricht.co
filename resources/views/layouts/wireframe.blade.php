@@ -150,7 +150,9 @@
         <?php if(\App\Http\Util\CookieConsentUtil::isAgreed()): ?>
             <script src="/js/ads.js"></script>
         <?php endif; ?>
-        @include('components.adblock')
+        @if (Request::path() !== 'datenschutz' && Request::path() !== 'impressum')
+            @include('components.adblock')
+        @endif
         @include('components.consent')
         @yield('javascript')
     </body>
