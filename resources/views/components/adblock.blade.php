@@ -19,7 +19,7 @@
 
             <hr/>
 
-            <div class="columns has-text-centered is-gapless">
+            <div class="columns has-text-centered is-gapless is-hidden-mobile">
                 <div class="column">
                     {{ trans('adblock.development') }}
                     <span class="icon">

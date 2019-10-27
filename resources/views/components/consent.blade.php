@@ -11,7 +11,7 @@
             </div>
             <p class="has-margin-bottom">{{ trans('consent.consentText') }}</p>
 
-            <div class="columns has-text-centered is-gapless">
+            <div class="columns has-text-centered is-gapless is-hidden-mobile">
                 <div class="column">
                     {{ trans('consent.essential') }}
                     <span class="icon">
