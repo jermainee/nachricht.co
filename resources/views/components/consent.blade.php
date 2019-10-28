@@ -53,8 +53,6 @@
             location.reload(true);
         });
 
-        localStorage.setItem('cookieConsent', 'agree');
-
         const cookieConsentDecision = localStorage.getItem('cookieConsent');
         const cookieConsentTimestamp = localStorage.getItem('cookieConsentTimestamp');
         if (cookieConsentDecision) {
