@@ -4,7 +4,7 @@
     <div class="modal-content">
         <div class="box">
             <div class="title is-4 has-text-centered">
-                <span class="icon is-large">
+                <span class="icon is-large is-hidden-mobile">
                     <img src="/images/icons/digital.svg" alt="AdBlocker"/>
                 </span>
                 <br/>
@@ -13,11 +13,11 @@
             <p class="has-margin-bottom">
                 {{ trans('adblock.text') }}
             </p>
-            <p class="has-margin-bottom has-text-weight-bold">
+            <p class="has-margin-bottom has-text-weight-bold is-hidden-mobile">
                 {{ trans('adblock.boldText') }}
             </p>
 
-            <hr/>
+            <hr class="is-hidden-mobile"/>
 
             <div class="columns has-text-centered is-gapless is-hidden-mobile">
                 <div class="column">

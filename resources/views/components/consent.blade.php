@@ -3,10 +3,6 @@
     <div class="modal-content">
         <div class="box">
             <div class="title is-4 has-text-centered">
-                <span class="icon is-medium">
-                    <img src="/images/icons/cookie.svg" alt="{{ trans('consent.consentText') }}"/>
-                </span>
-                <br/>
                 {{ trans('consent.consent') }}
             </div>
             <p class="has-margin-bottom">{{ trans('consent.consentText') }}</p>
@@ -41,9 +37,6 @@
 <a id="cookieSettingsButton">
     <span class="is-hidden-mobile has-text-weight-bold has-text-grey">
         {{ trans('consent.consent') }}
-    </span>
-     <span class="icon is-normal">
-        <img src="/images/icons/cookie.svg" alt="{{ trans('consent.consentText') }}"/>
     </span>
 </a>
 
