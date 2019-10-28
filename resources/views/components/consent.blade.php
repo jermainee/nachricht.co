@@ -53,6 +53,8 @@
             location.reload(true);
         });
 
+        localStorage.setItem('cookieConsent', 'agree');
+
         const cookieConsentDecision = localStorage.getItem('cookieConsent');
         const cookieConsentTimestamp = localStorage.getItem('cookieConsentTimestamp');
         if (cookieConsentDecision) {
@@ -84,10 +86,6 @@
             window.localStorage.setItem('cookieConsentTimestamp', Date.now().toString());
             document.location.reload(true);
         });
-
-        if (!localStorage.getItem('cookieConsent')) {
-            localStorage.setItem('cookieConsent', 'agree');
-        }
     });
 
     const setConsentCookie = (cookieConsentDecision) => {
