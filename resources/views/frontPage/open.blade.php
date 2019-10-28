@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="frontPage">
-        <section class="hero is-primary has-text-centered">
+        <section class="hero is-primary has-text-centered is-small">
             <div class="hero-body">
                 <div class="container">
                     <div class="box">
