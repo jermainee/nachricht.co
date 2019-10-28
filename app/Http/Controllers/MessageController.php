@@ -12,7 +12,7 @@ class MessageController extends Controller
 {
 	private const OPEN_TIMEOUT_IN_SECONDS = 300; // 5 minutes
 
-	private const ALLOWED_REFERERS = [
+	public const ALLOWED_REFERERS = [
 		'https://nachricht.co/',
 		'https://nachricht.co.test/',
 	];
@@ -125,6 +125,7 @@ class MessageController extends Controller
 			'uid' => null,
 			'message' => '',
 			'password' => '',
+			'iv' => '',
 			'deleted_at' => $dateTime,
 			'updated_at' => $dateTime
 		]);
