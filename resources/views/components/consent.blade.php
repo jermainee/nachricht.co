@@ -35,7 +35,7 @@
 </div>
 
 <a id="cookieSettingsButton">
-    <span class="is-hidden-mobile has-text-weight-bold has-text-grey">
+    <span class="has-text-weight-bold has-text-grey">
         {{ trans('consent.consent') }}
     </span>
 </a>
@@ -84,6 +84,10 @@
             window.localStorage.setItem('cookieConsentTimestamp', Date.now().toString());
             document.location.reload(true);
         });
+
+        if (!localStorage.getItem('cookieConsent')) {
+            localStorage.setItem('cookieConsent', 'agree');
+        }
     });
 
     const setConsentCookie = (cookieConsentDecision) => {
