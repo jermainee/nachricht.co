@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Message;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
 
@@ -45,6 +46,8 @@ class MessageController extends Controller
 		$message->created_at = $dateTime;
 		$message->updated_at = $dateTime;
 		$message->save();
+
+		DB::table('message_count')->increment('message_count');
 
 		$link = 'https://nachricht.co/' . $message->uid . '_' . $encryptionKey;
 
