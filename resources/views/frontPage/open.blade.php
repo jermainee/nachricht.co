@@ -17,6 +17,10 @@
         <section class="hero is-primary has-text-centered is-small">
             <div class="hero-body">
                 <div class="container">
+                    <div class="has-padding-bottom">
+                        @include('components.ads')
+                    </div>
+
                     <div class="box">
                         <p class="is-size-5 is-marginless">
                             @lang('frontpage.openText')
@@ -24,8 +28,6 @@
                                 <br/> @lang('frontpage.openWithPasswordText')
                             <?php endif; ?>
                         </p>
-
-                        @include('components.ads')
 
                         <?php if($hasPassword): ?>
                             <form method="post" action="/n" autocomplete="off">
