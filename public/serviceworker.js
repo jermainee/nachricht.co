@@ -1,4 +1,4 @@
-const CACHE = "nachrichtco-cache-v12";
+const CACHE = "nachrichtco-cache-v13";
 const precacheFiles = [];
 
 self.addEventListener("install", function (event) {
@@ -23,7 +23,7 @@ self.addEventListener("activate", function (event) {
 
 // If any fetch fails, it will look for the request in the cache and serve it from there first
 self.addEventListener("fetch", function (event) {
-    if (event.request.url.includes("/n/") || /^https:\/\/nachricht\.co\/(.*?)_(.*?)$/.test(event.request.url)) {
+    if (event.request.url.includes('/n') || /^https:\/\/nachricht\.co\/(.*?)_(.*?)$/.test(event.request.url)) {
         console.log("[ServiceWorker] Skip caching here because of sensitive data");
         return;
     }
