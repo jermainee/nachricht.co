@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        @if (Request::path() === '/')
-            <title>Nachricht.co - Die verschlüsselte Einweg-Nachricht</title>
-            <meta name="description" content="Mit Nachricht.co kannst du völlig anonym und verschlüsselt eine sich selbstzerstörende Einweg-Nachricht per Link an deinen Gesprächspartner senden."/>
-            <meta property="og:title" content="Nachricht.co - Die verschlüsselte Einweg-Nachricht"/>
-            <meta property="og:description" content="Mit Nachricht.co kannst du völlig anonym und verschlüsselt eine sich selbstzerstörende Einweg-Nachricht per Link an deinen Gesprächspartner senden."/>
+        @if (in_array(Request::path(), ['/', 'de', 'en', 'ru']))
+            <title>@lang('meta.title')</title>
+            <meta name="description" content="@lang('meta.description')"/>
+            <meta property="og:title" content="@lang('meta.title')"/>
+            <meta property="og:description" content="@lang('meta.description')"/>
             <meta property="og:site_name" content="Nachricht.co"/>
             <meta property="og:url" content="https://nachricht.co"/>
             <meta property="og:image" content=""/>
