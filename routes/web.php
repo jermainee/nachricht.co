@@ -9,6 +9,24 @@ Route::get('lang/{locale}', 'LanguageController@update');
 Route::get('/', function () {
     return view('frontPage.frontPage');
 });
+Route::get('/de', function () {
+	App::setLocale('de');
+	session()->put('locale', 'de');
+
+	return redirect('/', 301);
+});
+Route::get('/en', function () {
+	App::setLocale('en');
+	session()->put('locale', 'en');
+
+	return view('frontPage.frontPage');
+});
+Route::get('/ru', function () {
+	App::setLocale('ru');
+	session()->put('locale', 'ru');
+
+	return view('frontPage.frontPage');
+});
 Route::get('/{uid}_{key}','MessageController@open');
 Route::get('/n', 'MessageController@read');
 Route::post('/n', 'MessageController@read');

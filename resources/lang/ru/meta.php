@@ -1,6 +1,6 @@
 <?php
 
 return [
-	'title' => 'Nachricht.co - The encrypted one-time message',
-	'description' => 'With Nachricht.co you can send an entirely anonymous and encrypted a self-destructing one-time message via link to your conversation partner.'
+	'title' => 'Nachricht.co - Зашифрованное одноразовое сообщение',
+	'description' => 'С помощью Nachricht.co вы можете отправить совершенно анонимное и зашифрованное одноразовое самоуничтожающееся сообщение по ссылке вашему собеседнику.'
 ];

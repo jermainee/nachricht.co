@@ -15,7 +15,11 @@ class MessageController extends Controller
 
 	public const ALLOWED_REFERERS = [
 		'https://nachricht.co/',
+		'https://nachricht.co/en',
+		'https://nachricht.co/ru',
 		'https://nachricht.co.test/',
+		'https://nachricht.co.test/en',
+		'https://nachricht.co.test/ru',
 	];
 
 	public function create(Request $request): JsonResponse

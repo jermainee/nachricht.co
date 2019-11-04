@@ -1,6 +1,6 @@
 <?php
 
 return [
-	'title' => 'Nachricht.co - Die verschlüsselte Einweg-Nachricht',
-	'description' => 'Mit Nachricht.co kannst du völlig anonym und verschlüsselt eine sich selbstzerstörende Einweg-Nachricht per Link an deinen Gesprächspartner senden.'
+	'title' => 'Nachricht.co - The encrypted one-time message',
+	'description' => 'With Nachricht.co you can send an entirely anonymous and encrypted a self-destructing one-time message via link to your conversation partner.'
 ];
