@@ -154,5 +154,6 @@
         @endif
         @include('components.consent')
         @yield('javascript')
+        <script defer src="/register.js"></script>
     </body>
 </html>
