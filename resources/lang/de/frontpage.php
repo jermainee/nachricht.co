@@ -24,7 +24,7 @@ return [
 	'welcomeText' => 'Mit Nachricht.co kannst du sich selbstzerstörende und verschlüsselte Einweg-Nachrichten über das Internet verschicken. Du musst nichtmal auf den Messenger oder das soziale Netzwerk deiner Wahl verzichten. Unabhängig, sicher und kostenlos!',
 
 	'deletion' => 'Restlose Löschung',
-	'deletionText' => 'Nachrichten zerstören sich nach dem ersten Öffnen selbst. Falls die Nachricht nicht geöffnet wurde, wird sie nach 24 Stunden automatisch gelöscht. Gelöschte Nachrichten können nicht wiederhergestellt werden und sind für immer vernichtet.',
+	'deletionText' => 'Nachrichten zerstören sich nach dem ersten Öffnen selbst. Falls die Nachricht nicht geöffnet wurde, wird sie nach 48 Stunden automatisch gelöscht. Gelöschte Nachrichten können nicht wiederhergestellt werden und sind für immer vernichtet.',
 
 	'encryption' => 'Starke Verschlüsselung',
 	'encryptionText' => 'Um Nachrichten vor fremden Blicken zu schützen wird jede Nachricht individuell verschlüsselt, genauso wie deine Verbindung zu uns. Hierfür verwenden wir den AES mit einer Schlüssellänge von 256 Bits, welcher für staatliche Dokumente mit höchster Geheimhaltungsstufe zugelassen ist.',
