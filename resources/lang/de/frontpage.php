@@ -1,7 +1,13 @@
 <?php
 
 return [
+	'hours' => 'Stunden',
+	'days' => 'Tage',
+
 	'messagePlaceholder' => 'Tippe hier deine Nachricht ein ...',
+	'deleteAfterReadLabel' => 'Nach dem Lesen löschen',
+	'deadlineLabel' => 'Deadline',
+	'passwordLabel' => 'Passwort',
 	'passwordPlaceholder' => 'Passwort (optional) ...',
 	'createButton' => 'Nachricht erstellen',
 

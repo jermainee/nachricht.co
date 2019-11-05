@@ -1,8 +1,14 @@
 <?php
 
 return [
+	'hours' => 'часы',
+	'days' => 'дни',
+
 	'messagePlaceholder' => 'Введите ваше сообщение здесь ....',
 	'passwordPlaceholder' => 'Пароль (необязательно) ....',
+	'deleteAfterReadLabel' => 'Удалить после прочтения',
+	'deadlineLabel' => 'крайний срок',
+	'passwordLabel' => 'пароль',
 	'createButton' => 'Создать сообщение',
 
 	'copyButton' => 'Скопировать ссылку',

@@ -10,9 +10,59 @@
                     </div>
 
                     <div class="box">
-                        <form id="messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm" autocomplete="off">
-                            <textarea class="frontPage__messageField" name="message" placeholder="{{ trans('frontpage.messagePlaceholder') }}" autofocus></textarea>
-                            <input class="input has-margin-bottom" name="password" type="password" placeholder="{{ trans('frontpage.passwordPlaceholder') }}" maxlength="32"/>
+                        <form id="messageForm" class="frontPage__messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm" autocomplete="off">
+                            <textarea id="messageField" class="frontPage__messageField" name="message" placeholder="{{ trans('frontpage.messagePlaceholder') }}" autofocus></textarea>
+
+                            <div id="settingsToggle" class="frontPage__settingsIcon">
+                                <img src="/images/icons/settings.svg" alt="settings"/>
+                            </div>
+
+                            <div id="messageSettings" class="frontPage__settings is-hidden">
+                                <div class="columns is-vcentered">
+                                    <div class="column">
+                                        <div class="field has-addons">
+                                            <div class="control">
+                                                <a class="button is-static">
+                                                    {{ trans('frontpage.passwordLabel') }}
+                                                </a>
+                                            </div>
+                                            <div class="control is-expanded">
+                                                <input class="input" name="password" type="password" placeholder="{{ trans('frontpage.passwordPlaceholder') }}" maxlength="32"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column is-narrow">
+                                        <div class="field has-addons">
+                                            <div class="control">
+                                                <a class="button is-static">
+                                                    {{ trans('frontpage.deadlineLabel') }}
+                                                </a>
+                                            </div>
+                                            <div class="control is-expanded">
+                                                <div class="select is-fullwidth">
+                                                    <select name="deletion">
+                                                        <option value="2">2 {{ trans('frontpage.hours') }}</option>
+                                                        <option value="12">12 {{ trans('frontpage.hours') }}</option>
+                                                        <option value="24" selected>24 {{ trans('frontpage.hours') }}</option>
+                                                        <option value="48">2 {{ trans('frontpage.days') }}</option>
+                                                        <option value="168">7 {{ trans('frontpage.days') }}</option>
+                                                        <option value="336">14 {{ trans('frontpage.days') }}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column is-narrow">
+                                        <div class="control">
+                                            <input id="deleteAfterRead" type="checkbox" name="deleteAfterRead" class="switch" checked="checked">
+                                            <label for="deleteAfterRead">{{ trans('frontpage.deleteAfterReadLabel') }}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <button class="button is-primary is-fullwidth has-text-weight-bold">{{ trans('frontpage.createButton') }}</button>
                         </form>
                     </div>

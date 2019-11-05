@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const messageSettings = document.getElementById('messageSettings');
+    const settingsToggle = document.getElementById('settingsToggle');
     const messageForm = document.getElementById('messageForm');
+    const messageField = document.getElementById('messageField');
     const linkForm = document.getElementById('linkForm');
     const messageLink = document.getElementById('messageLink');
     const shareWhatsApp = document.getElementById('shareWhatsApp');
@@ -34,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 linkForm.classList.remove('is-hidden');
                 messageForm.parentElement.classList.add('is-hidden');
             });
+    });
+
+    settingsToggle.addEventListener('click', event => {
+        event.preventDefault();
+        messageSettings.classList.toggle('is-hidden');
+        messageField.classList.toggle('frontPage__messageField--reduced');
     });
 
     copyLink.addEventListener('click', () => {

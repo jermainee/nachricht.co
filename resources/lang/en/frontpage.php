@@ -1,7 +1,13 @@
 <?php
 
 return [
+	'hours' => 'hours',
+	'days' => 'days',
+
 	'messagePlaceholder' => 'Type your message here ...',
+	'deleteAfterReadLabel' => 'Delete after reading',
+	'passwordLabel' => 'Password',
+	'deadlineLabel' => 'Deadline',
 	'passwordPlaceholder' => 'Password (optional) ...',
 	'createButton' => 'Create message',
 
