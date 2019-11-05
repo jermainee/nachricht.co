@@ -3,6 +3,8 @@
 @import "../../node_modules/bulma/bulma";
 @import "overwrite";
 @import "helpers";
+@import "../../node_modules/bulma-switch/dist/css/bulma-switch";
+@import "../../node_modules/bulma-tooltip/src/sass/index";
 
 // components
 @import "../views/layouts/wireframe";

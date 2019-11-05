@@ -47,6 +47,8 @@ class MessageController extends Controller
 		);
 		$message->password = !empty($request->input('password')) ? Hash::make($request->input('password')) : null;
 		$message->iv = base64_encode($iv);
+		$message->delete_after_hours = is_numeric($request->input('deletion')) ? $request->input('deletion') : 48;
+		$message->delete_after_read = !empty($request->input('deleteAfterRead'));
 		$message->created_at = $dateTime;
 		$message->updated_at = $dateTime;
 		$message->save();
@@ -127,15 +129,17 @@ class MessageController extends Controller
 		$decodedMassage = base64_decode($message->message);
 		$decryptedMessage = $this->decryptMessage($decodedMassage, $key, base64_decode($message->iv));
 
-		$dateTime = new \DateTime();
-		$message->update([
-			'uid' => null,
-			'message' => '',
-			'password' => '',
-			'iv' => '',
-			'deleted_at' => $dateTime,
-			'updated_at' => $dateTime
-		]);
+		if ((bool) $message->delete_after_read) {
+			$dateTime = new \DateTime();
+			$message->update([
+				'uid' => null,
+				'message' => '',
+				'password' => '',
+				'iv' => '',
+				'deleted_at' => $dateTime,
+				'updated_at' => $dateTime
+			]);
+		}
 
 		return view('frontPage.read', [
 			'message' => $this->renderHyperlinks($decryptedMessage)

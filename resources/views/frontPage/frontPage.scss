@@ -1,4 +1,9 @@
 .frontPage {
+
+    &__messageForm {
+        position: relative;
+    }
+
     &__messageField {
         @extend .textarea;
         @extend .has-margin-bottom;
@@ -13,9 +18,43 @@
         }
 
         &:not([rows]) {
-            min-height: 35vh;
+            min-height: 40vh;
+
+            @include mobile {
+                min-height: 65vh;
+            }
+
             overflow-y: scroll;
         }
+
+        &--reduced:not([rows]) {
+            min-height: 40vh;
+        }
+    }
+
+    &__settingsIcon {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        background: $white;
+        border-radius: $global-radius;
+        cursor: pointer;
+
+        @extend .image;
+        @extend .is-marginless;
+
+        & img {
+            width: auto;
+            height: 30px;
+            margin-top: 5px;
+        }
+    }
+
+    &__settings {
+        margin: $global-margin 0;
+        padding: $global-padding 0;
+        border-top: 2px solid $light;
+        border-bottom: 2px solid $light;
     }
 
     &__icon {

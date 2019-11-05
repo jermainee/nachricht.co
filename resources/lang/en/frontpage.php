@@ -1,7 +1,13 @@
 <?php
 
 return [
+	'hours' => 'hours',
+	'days' => 'days',
+
 	'messagePlaceholder' => 'Type your message here ...',
+	'deleteAfterReadLabel' => 'Delete after reading',
+	'passwordLabel' => 'Password',
+	'deadlineLabel' => 'Deadline',
 	'passwordPlaceholder' => 'Password (optional) ...',
 	'createButton' => 'Create message',
 
@@ -18,7 +24,7 @@ return [
 	'welcomeText' => 'With Nachricht.co you can send self-destructive and encrypted one-way messages over the Internet. You don\'t even need to miss out the messenger or social network of your choice. We are an independent, secure and fully free service!',
 
 	'deletion' => 'Complete deletion',
-	'deletionText' => 'Messages self-destruct after first opening. If the message has not been opened, it will be deleted automatically after 24 hours. Deleted messages cannot be restored and are destroyed forever.',
+	'deletionText' => 'Messages self-destruct after first opening. If the message has not been opened, it will be deleted automatically after 48 hours. Deleted messages cannot be restored and are destroyed forever.',
 
 	'encryption' => 'Strong encryption',
 	'encryptionText' => 'In order to protect messages from unauthorized access, each message is individually encrypted, as is your connection to us as well. For this purpose we use the AES with a key length of 256 bits, which is approved for government documents with the highest level of confidentiality.',
