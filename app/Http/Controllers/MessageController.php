@@ -134,15 +134,17 @@ class MessageController extends Controller
 		$decodedMassage = base64_decode($message->message);
 		$decryptedMessage = $this->decryptMessage($decodedMassage, $key, base64_decode($message->iv));
 
-		$dateTime = new \DateTime();
-		$message->update([
-			'uid' => null,
-			'message' => '',
-			'password' => '',
-			'iv' => '',
-			'deleted_at' => $dateTime,
-			'updated_at' => $dateTime
-		]);
+		if ($message->delete_after_read) {
+			$dateTime = new \DateTime();
+			$message->update([
+				'uid' => null,
+				'message' => '',
+				'password' => '',
+				'iv' => '',
+				'deleted_at' => $dateTime,
+				'updated_at' => $dateTime
+			]);
+		}
 
 		return view('frontPage.read', [
 			'message' => $this->renderHyperlinks($decryptedMessage)
