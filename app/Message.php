@@ -16,6 +16,8 @@ class Message extends Model
 		'message',
 		'password',
 		'iv',
+		'delete_after_hours',
+		'delete_after_read',
 		'created_at',
 		'updated_at',
 		'deleted_at',
@@ -39,6 +41,8 @@ class Message extends Model
 		'message' => null,
 		'password' => null,
 		'iv' => null,
+		'delete_after_hours' => 24,
+		'delete_after_read' => true,
 		'created_at' => null,
 		'updated_at' => null,
 		'deleted_at' => null

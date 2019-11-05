@@ -35,6 +35,11 @@ class MessageController extends Controller
 		$encryptionKey = $this->generateId(16);
 		$iv = $this->generateIv();
 
+		$deleteAfterRead = true;
+		if (!empty($request->input('deleteAfterRead')) && $request->input('deleteAfterRead') === 'off') {
+			$deleteAfterRead = false;
+		}
+
 		$dateTime = new \DateTime();
 		$message = new Message();
 		$message->uid = $this->generateId(16);
@@ -47,6 +52,8 @@ class MessageController extends Controller
 		);
 		$message->password = !empty($request->input('password')) ? Hash::make($request->input('password')) : null;
 		$message->iv = base64_encode($iv);
+		$message->delete_after_hours = is_numeric($request->input('deletion')) ? $request->input('deletion') : 48;
+		$message->delete_after_read = $deleteAfterRead;
 		$message->created_at = $dateTime;
 		$message->updated_at = $dateTime;
 		$message->save();

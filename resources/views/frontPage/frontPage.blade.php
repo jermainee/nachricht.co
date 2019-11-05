@@ -44,8 +44,8 @@
                                                     <select name="deletion">
                                                         <option value="2">2 {{ trans('frontpage.hours') }}</option>
                                                         <option value="12">12 {{ trans('frontpage.hours') }}</option>
-                                                        <option value="24" selected>24 {{ trans('frontpage.hours') }}</option>
-                                                        <option value="48">2 {{ trans('frontpage.days') }}</option>
+                                                        <option value="24">24 {{ trans('frontpage.hours') }}</option>
+                                                        <option value="48" selected>2 {{ trans('frontpage.days') }}</option>
                                                         <option value="168">7 {{ trans('frontpage.days') }}</option>
                                                         <option value="336">14 {{ trans('frontpage.days') }}</option>
                                                     </select>
