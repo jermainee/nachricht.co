@@ -21,11 +21,13 @@ class Localization
 		    return $next($request);
 	    }
 
-	    $browserLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-	    if (in_array($browserLang, self::ACCEPTED_LANGUAGES)) {
-		    App::setLocale($browserLang);
+	    if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+		    $browserLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+		    if (in_array($browserLang, self::ACCEPTED_LANGUAGES)) {
+			    App::setLocale($browserLang);
 
-		    return $next($request);
+			    return $next($request);
+		    }
 	    }
 
 	    return $next($request);
