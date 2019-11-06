@@ -4,10 +4,6 @@
     Datenschutz
 @endsection
 
-@section('metatags')
-    <meta name="robots" content="noindex"/>
-@endsection
-
 @section('content')
     <section class="hero is-primary has-text-centered">
         <div class="hero-body">

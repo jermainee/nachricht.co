@@ -5,8 +5,6 @@
 @endsection
 
 @section('metatags')
-    <meta name="robots" content="noindex"/>
-    <meta name="robots" content="noindex"/>
     <meta name="description" content="Klicke auf diesen Link um die verschlüsselte Einweg-Nachricht zu lesen. Sie zerstört sich danach selbst."/>
     <meta property="og:title" content="Verschlüsselte Einweg-Nachricht öffnen - Nachricht.co"/>
     <meta property="og:description" content="Klicke auf diesen Link um die verschlüsselte Einweg-Nachricht zu lesen. Sie zerstört sich danach selbst."/>
