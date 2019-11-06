@@ -1,3 +1,33 @@
 User-agent: *
-Disallow: /images/*
-Allow: *
+Disallow: /*.gif$
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /*.svg$
+Disallow: /*.GIF$
+Disallow: /*.JPG$
+Disallow: /*.PNG$
+Disallow: /*.SVG$
+Disallow: /b/
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Disallow: /n
+Disallow: /impressum
+Disallow: /datenschutz
+Allow: /
+Allow: /robots.txt
+
+User-Agent: Googlebot-Image
+Disallow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Facebot
+Disallow: /n
