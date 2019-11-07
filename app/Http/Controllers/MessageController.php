@@ -24,13 +24,13 @@ class MessageController extends Controller
 
 	public function create(Request $request): JsonResponse
 	{
-		$referer = $request->headers->get('referer');
+		/*$referer = $request->headers->get('referer');
 		if (!$referer || !in_array($referer, self::ALLOWED_REFERERS)) {
 			return Response::json([
 				'success' => false,
 				'error' => 'access denied',
 			]);
-		}
+		}*/
 
 		$encryptionKey = $this->generateId(16);
 		$iv = $this->generateIv();
