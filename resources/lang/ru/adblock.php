@@ -10,4 +10,5 @@ return [
 	'help' => 'Ваша поддержка',
 
 	'reloadButton' => 'Перезагрузить страницу и принять cookie-файлы',
+	'disagreeButton' => 'отказ'
 ];

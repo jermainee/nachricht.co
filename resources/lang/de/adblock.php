@@ -10,4 +10,5 @@ return [
 	'help' => 'Deine Unterstützung',
 
 	'reloadButton' => 'Seite neu laden & Cookies akzeptieren',
+	'disagreeButton' => 'Ablehnen',
 ];

@@ -10,4 +10,5 @@ return [
 	'help' => 'Your support',
 
 	'reloadButton' => 'Reload page & agree cookies',
+	'disagreeButton' => 'Dismiss',
 ];

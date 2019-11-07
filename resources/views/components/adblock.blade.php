@@ -40,8 +40,12 @@
                 </div>
             </div>
 
-            <button id="adbAgree" class="button is-primary is-fullwidth has-text-weight-bold has-margin-top">
+            <button id="adbAgree" class="button is-primary is-fullwidth has-text-weight-bold has-margin-top has-margin-bottom">
                 {{ trans('adblock.reloadButton') }}
+            </button>
+
+            <button id="adbDisagree" class="button is-white is-fullwidth has-text-grey is-small">
+                {{ trans('adblock.disagreeButton') }}
             </button>
         </div>
     </div>
@@ -50,9 +54,13 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const adbAgree = document.getElementById('adbAgree');
+        const adbDisagree = document.getElementById('adbDisagree');
 
         const cookieConsentDecision = localStorage.getItem('cookieConsent');
         if (!cookieConsentDecision) {
+            return;
+        }
+        if (!!sessionStorage.getItem('adbDisagree')) {
             return;
         }
 
@@ -61,6 +69,12 @@
                 setConsentCookie('agree');
                 window.localStorage.setItem('cookieConsent', 'agree');
                 window.localStorage.setItem('cookieConsentTimestamp', null);
+                location.reload(true);
+            });
+            adbDisagree.addEventListener('click', () => {
+                const date = new Date();
+                date.setTime(date.getTime() + (2*24*60*60*1000));
+                sessionStorage.setItem('adbDisagree', date.toUTCString());
                 location.reload(true);
             });
 
