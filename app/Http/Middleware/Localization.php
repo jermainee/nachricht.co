@@ -28,6 +28,8 @@ class Localization
 
 			    return $next($request);
 		    }
+
+		    App::setLocale('en');
 	    }
 
 	    return $next($request);
