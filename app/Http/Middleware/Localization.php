@@ -10,6 +10,7 @@ class Localization
 	private const ACCEPTED_LANGUAGES = [
 		'de',
 		'en',
+        'nl',
 		'ru',
 	];
 
