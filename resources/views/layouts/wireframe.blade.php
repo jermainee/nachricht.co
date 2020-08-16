@@ -79,6 +79,9 @@
                                 @case('es')
                                     <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/> Spanish
                                     @break
+                                @case('nl')
+                                    <img src="/images/languages/nl.svg" class="navbar__language" alt="Nederlands"/> Nederlands
+                                    @break
                                 @case('ru')
                                     <img src="/images/languages/ru.svg" class="navbar__language" alt="русский"/> русский
                                     @break
@@ -94,9 +97,9 @@
                             <a class="navbar-item" href="/lang/en">
                                 <img src="/images/languages/en.svg" class="navbar__language" alt="English"/> English
                             </a>
-                            <!--<a class="navbar-item"  href="/lang/es">
-                                <img src="/images/languages/es.svg" class="navbar__language" alt="Spanish"/> Spanish
-                            </a>-->
+                            <a class="navbar-item"  href="/lang/nl">
+                                <img src="/images/languages/nl.svg" class="navbar__language" alt="Nederlands"/> Nederlands
+                            </a>
                             <a class="navbar-item"  href="/lang/ru">
                                 <img src="/images/languages/ru.svg" class="navbar__language" alt="русский"/> русский
                             </a>

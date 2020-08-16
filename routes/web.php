@@ -21,6 +21,12 @@ Route::get('/en', function () {
 
 	return view('frontPage.frontPage');
 });
+Route::get('/nl', function () {
+    App::setLocale('nl');
+    session()->put('locale', 'nl');
+
+    return view('frontPage.frontPage');
+});
 Route::get('/ru', function () {
 	App::setLocale('ru');
 	session()->put('locale', 'ru');
