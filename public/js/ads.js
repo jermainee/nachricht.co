@@ -1,1 +1,0 @@
-var hasAds = true;
