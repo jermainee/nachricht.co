@@ -51,7 +51,7 @@
     </div>
 </div>
 
-<script>
+<script defer>
     document.addEventListener('DOMContentLoaded', () => {
         const adbAgree = document.getElementById('adbAgree');
         const adbDisagree = document.getElementById('adbDisagree');
@@ -64,7 +64,7 @@
             return;
         }
 
-        if(window.hasAds !== true){
+        if(!adsbygoogle.loaded){
             adbAgree.addEventListener('click', () => {
                 setConsentCookie('agree');
                 window.localStorage.setItem('cookieConsent', 'agree');

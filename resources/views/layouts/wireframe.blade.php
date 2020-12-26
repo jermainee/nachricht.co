@@ -149,9 +149,6 @@
                 <p><strong>Nachricht.co</strong>, seit 2014 für dich da.</p>
             </div>
         </footer>
-        <?php if(\App\Http\Util\CookieConsentUtil::isAgreed()): ?>
-            <script src="/js/ads.js"></script>
-        <?php endif; ?>
         @if (Request::path() !== 'datenschutz' && Request::path() !== 'impressum')
             @include('components.adblock')
         @endif
