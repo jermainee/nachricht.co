@@ -12,3 +12,7 @@
 * [english](https://nachricht.co/lang/en)
 * [dutch](https://nachricht.co/lang/nl)
 * [russian](https://nachricht.co/lang/ru)
+
+## Mainly used packages:
+ * [laravel/laravel](https://github.com/laravel/laravel)
+ * [jgthms/bulma](https://github.com/jgthms/bulma)
