@@ -5,6 +5,9 @@
                 <div class="column">
                     <h2>{{ trans('frontpage.welcome') }}</h2>
                     <p>{{ trans('frontpage.welcomeText') }}</p>
+                    <br/>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="github-button" href="https://github.com/jermainee/nachricht.co" data-size="large" data-show-count="true" aria-label="Star jermainee/nachricht.co on GitHub">Star</a>
                 </div>
 
                 <div class="column is-two-fifths">
