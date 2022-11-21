@@ -1,4 +1,4 @@
-<div id="cookieConsent" class="modal">
+<?php /*<div id="cookieConsent" class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
         <div class="box">
@@ -92,4 +92,4 @@
         const expires = "expires=" + date.toUTCString();
         document.cookie = 'cookieConsent' + "=" + cookieConsentDecision + ";" + expires + ";path=/";
     }
-</script>
+</script>*/?>
