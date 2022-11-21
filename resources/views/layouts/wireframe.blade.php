@@ -148,8 +148,6 @@
                 </div>
 
                 <p><strong>Nachricht.co</strong>, seit 2014 für dich da.</p>
-
-                <script id="CookieDeclaration" src="https://consent.cookiebot.com/c8e9dbf0-6fb2-4ead-a57b-10556d5240b7/cd.js" type="text/javascript" async></script>
             </div>
         </footer>
         @if (Request::path() !== 'datenschutz' && Request::path() !== 'impressum')
