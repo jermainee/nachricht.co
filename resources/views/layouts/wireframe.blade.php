@@ -151,10 +151,6 @@
                 <p><strong>Nachricht.co</strong>, seit 2014 für dich da.</p>
             </div>
         </footer>
-        @if (Request::path() !== 'datenschutz' && Request::path() !== 'impressum')
-            @include('components.adblock')
-        @endif
-        @include('components.consent')
         @yield('javascript')
         <script defer src="/register.js"></script>
         <script async defer src="/js/github-button.js"></script>
