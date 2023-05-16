@@ -138,7 +138,6 @@
         </div>
 
         <footer class="footer has-background-light">
-            <script id="CookieDeclaration" src="https://consent.cookiebot.com/c8e9dbf0-6fb2-4ead-a57b-10556d5240b7/cd.js" type="text/javascript" async></script>
             <div class="content has-text-centered">
                 <div class="has-margin-bottom">
                     <a href="/faq" title="Häufig gestellte Fragen" class="has-text-grey">Häufig gestellte Fragen</a>
