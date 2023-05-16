@@ -1,4 +1,3 @@
-<?php if (\App\Http\Util\CookieConsentUtil::isAgreed()): ?>
 <div class="has-text-right">
     <span class="is-size-7">Anzeige</span>
 </div>
@@ -13,4 +12,3 @@
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<?php endif; ?>
