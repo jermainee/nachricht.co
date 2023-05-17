@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c8e9dbf0-6fb2-4ead-a57b-10556d5240b7" data-blockingmode="auto" type="text/javascript"></script>
-        <meta charset="utf-8">
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c8e9dbf0-6fb2-4ead-a57b-10556d5240b7" type="text/javascript" async></script>        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         @if (in_array(Request::path(), ['/', 'de', 'en', 'ru']))
             <title>@lang('meta.title')</title>
