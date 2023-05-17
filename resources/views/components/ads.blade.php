@@ -1,7 +1,7 @@
 <div class="has-text-right">
     <span class="is-size-7">Anzeige</span>
 </div>
-<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/plain" data-cookieconsent="marketing" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Nachricht.co -->
 <ins class="adsbygoogle"
      style="display:block"

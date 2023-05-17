@@ -1,4 +1,4 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39078917-4"></script>
+<script type="text/plain" data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=UA-39078917-4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
