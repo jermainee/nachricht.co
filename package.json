@@ -11,7 +11,7 @@
     "scss": "sass ./resources/scss/app.scss ./public/css/app.css",
     "scss-production": "sass --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css",
     "js": "uglifyjs --compress ./resources/js/app.js --output ./public/js/app.js",
-    "build": "npm run scss-production && npm run js"
+    "build": "npm run scss-production"
   },
   "dependencies": {
     "bulma": "^0.8.2",
