@@ -10,17 +10,9 @@
     "watch": "sass --watch ./resources/scss/app.scss ./public/css/app.css",
     "scss": "sass ./resources/scss/app.scss ./public/css/app.css",
     "scss-production": "sass --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css",
-    "js": "uglifyjs --compress ./resources/js/app.js --output ./public/js/app.js"
+    "js": "uglifyjs --compress ./resources/js/app.js --output ./public/js/app.js",
+    "build": "npm run scss-production && npm run js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/jermainee/nachricht.co.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://gitlab.com/jermainee/nachricht.co/issues"
-  },
-  "homepage": "https://gitlab.com/jermainee/nachricht.co#readme",
   "dependencies": {
     "bulma": "^0.8.2",
     "bulma-switch": "^2.0.0",
