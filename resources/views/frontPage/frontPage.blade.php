@@ -13,11 +13,7 @@
                         <form id="messageForm" class="frontPage__messageForm" enctype="multipart/form-data" method="post" action="/" name="messageForm" autocomplete="off">
                             <textarea id="messageField" class="frontPage__messageField" name="message" placeholder="{{ trans('frontpage.messagePlaceholder') }}" autofocus></textarea>
 
-                            <div id="settingsToggle" class="frontPage__settingsIcon">
-                                <img src="/images/icons/settings.svg" alt="settings"/>
-                            </div>
-
-                            <div id="messageSettings" class="frontPage__settings is-hidden">
+                            <div id="messageSettings" class="frontPage__settings">
                                 <div class="columns is-vcentered">
                                     <div class="column">
                                         <div class="field has-addons">
