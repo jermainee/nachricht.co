@@ -38,7 +38,7 @@
         <link rel="icon" type="image/png" href="/images/appicons/favicon-32x32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="/images/appicons/favicon-16x16.png" sizes="16x16" />
         <link rel="icon" type="image/png" href="/images/appicons/favicon-128.png" sizes="128x128" />
-        <link type="text/css" rel="stylesheet" media="screen" href="{{ asset('css/app.css') }}"/>
+        <link type="text/css" rel="stylesheet" media="screen" href="{{ asset('css/app.css') }}?22p8w7j5pm"/>
         <link rel="canonical" href="https://nachricht.co/{{ Request::path() === '/' ? '' : Request::path() }}" />
     </head>
     <body>
