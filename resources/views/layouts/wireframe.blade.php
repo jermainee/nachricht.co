@@ -149,6 +149,5 @@
         </footer>
         @yield('javascript')
         <script defer src="/register.js"></script>
-        <script async defer src="/js/github-button.js"></script>
     </body>
 </html>
