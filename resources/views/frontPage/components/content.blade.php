@@ -85,7 +85,7 @@
     </div>
 </section>
 
-<section class="hero">
+<section class="hero is-hidden">
     <div class="hero-body">
         <div class="container">
             <h2 class="has-text-centered is-hidden">Bekannt aus</h2>
