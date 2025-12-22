@@ -16,6 +16,6 @@
   "dependencies": {
     "bulma": "^0.8.2",
     "bulma-switch": "^2.0.0",
-    "sass": "^1.26.11"
+    "sass": "^1.97.1"
   }
 }
