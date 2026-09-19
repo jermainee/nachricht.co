@@ -148,7 +148,6 @@
             </div>
         </footer>
         @yield('javascript')
-        <script src="https://cdn.apitiny.net/scripts/v2.0/main.js" data-site-id="6aac701e22cdfa67b2e3f024" data-test-mode="false" async></script>
         <script defer src="/register.js"></script>
     </body>
 </html>
