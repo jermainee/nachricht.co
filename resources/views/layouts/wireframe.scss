@@ -1,3 +1,6 @@
+@use "../../scss/variables" as *;
+@use "../../scss/bulma" as *;
+
 .navbar {
     box-shadow: $box-shadow;
     z-index: 2;
@@ -5,7 +8,7 @@
     &__language {
         width: 1.2rem;
         height: 1.2rem;
-        margin-right: $global-margin / 2;
+        margin-right: $global-margin * .5;
     }
 
     &__mobileLanguage {
@@ -27,7 +30,7 @@
 
 #cookieSettingsButton {
     position: fixed;
-    bottom: $global-padding / 2;
+    bottom: $global-padding * .5;
     right: $global-padding;
     border-radius: $global-radius 0 0 $global-radius;
     background-color: transparent;

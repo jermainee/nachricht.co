@@ -7,17 +7,17 @@
     "test": "tests"
   },
   "scripts": {
-    "watch": "sass --watch ./resources/scss/app.scss ./public/css/app.css",
-    "scss": "sass ./resources/scss/app.scss ./public/css/app.css",
-    "scss-production": "sass --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css",
+    "watch": "sass --load-path=node_modules --quiet-deps --watch ./resources/scss/app.scss ./public/css/app.css",
+    "scss": "sass --load-path=node_modules --quiet-deps ./resources/scss/app.scss ./public/css/app.css",
+    "scss-production": "sass --load-path=node_modules --quiet-deps --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css",
     "js": "uglifyjs --compress ./resources/js/app.js --output ./public/js/app.js",
     "build": "npm run scss-production",
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "bulma": "^0.8.2",
-    "bulma-switch": "^2.0.0",
-    "sass": "^1.103.1"
+    "bulma": "^1.0.4",
+    "bulma-switch": "^2.0.4",
+    "sass": "^1.106.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1"

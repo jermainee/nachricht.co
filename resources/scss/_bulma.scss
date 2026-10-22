@@ -1,0 +1,135 @@
+// Configures and loads Bulma. Stylesheets `@use "bulma"` for its variables and mixins and to @extend its classes.
+@use "variables" as v;
+
+@use "bulma/sass/utilities" with (
+    // neutral greys and system fonts like Bulma 0.8 (Bulma 1 tints greys blue and prefers Inter)
+    $scheme-h: 0,
+    $scheme-s: 0%,
+    $black: hsl(0, 0%, 4%),
+    $black-bis: hsl(0, 0%, 7%),
+    $black-ter: hsl(0, 0%, 14%),
+    $grey-darker: hsl(0, 0%, 21%),
+    $grey-dark: hsl(0, 0%, 29%),
+    $grey: hsl(0, 0%, 48%),
+    $grey-light: hsl(0, 0%, 71%),
+    $grey-lighter: hsl(0, 0%, 86%),
+    $grey-lightest: hsl(0, 0%, 93%),
+    $white-ter: hsl(0, 0%, 96%),
+    $white-bis: hsl(0, 0%, 98%),
+    $white: hsl(0, 0%, 100%),
+    $family-sans-serif: (BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif),
+
+    // colors
+    $primary: #00d1b2,
+    $light: #f9fbfc,
+    $link: #00d1b2,
+    // Bulma 1 would pick dark text on turquoise, keep it white like before.
+    $custom-colors: (
+        "primary": (#00d1b2, #fff),
+        "link": (#00d1b2, #fff),
+    ),
+
+    // Responsiveness
+    $fullhd-enabled: false,
+
+    // radius
+    $radius: v.$global-radius,
+);
+
+// Only the Bulma modules the site uses are loaded, in Bulma's own order so the CSS order stays intact.
+// To use another component (e.g. a notification), add its module at its place in that order.
+@use "bulma/sass/base/minireset";
+@use "bulma/sass/base/generic" with (
+    $strong-weight: 700,
+);
+@use "bulma/sass/base/animations";
+
+@use "bulma/sass/elements/block";
+@use "bulma/sass/elements/box" with (
+    $box-radius: v.$global-radius,
+    $box-padding: v.$global-padding,
+    $box-shadow: v.$box-shadow,
+);
+@use "bulma/sass/elements/button" with (
+    $button-static-color: hsl(0, 0%, 48%),
+    $button-weight: 400,
+    // Bulma 1 subtracts the 1px border from this padding, Bulma 0.8 did not
+    $button-padding-horizontal: calc(1em + 1px),
+);
+@use "bulma/sass/elements/content" with (
+    $content-heading-weight: 600,
+);
+@use "bulma/sass/elements/icon";
+@use "bulma/sass/elements/image";
+@use "bulma/sass/elements/title";
+
+@use "bulma/sass/form/shared" with (
+    $input-shadow: none,
+    $input-focus-h: 0,
+    $input-focus-s: 0%,
+    $input-focus-l: 71%,
+    $input-focus-shadow-alpha: 0,
+);
+@use "bulma/sass/form/input-textarea";
+@use "bulma/sass/form/select";
+@use "bulma/sass/form/tools";
+
+@use "bulma/sass/components/navbar" with (
+    $navbar-height: v.$global-margin * 4,
+    $navbar-dropdown-border-width: 2px,
+    $navbar-dropdown-radius: 6px,
+);
+@use "bulma/sass/grid/columns";
+
+@use "bulma/sass/layout/container";
+@use "bulma/sass/layout/footer";
+@use "bulma/sass/layout/hero" with (
+    $hero-body-padding-tablet: 3rem 1.5rem,
+);
+
+// All helpers but color, which generates every shade of every color (~180 kB), see the base colors below.
+@use "bulma/sass/helpers/aspect-ratio";
+@use "bulma/sass/helpers/border";
+@use "bulma/sass/helpers/flexbox";
+@use "bulma/sass/helpers/float";
+@use "bulma/sass/helpers/gap";
+@use "bulma/sass/helpers/overflow";
+@use "bulma/sass/helpers/position";
+@use "bulma/sass/helpers/spacing";
+@use "bulma/sass/helpers/typography";
+@use "bulma/sass/helpers/visibility";
+@use "bulma/sass/helpers/other";
+
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/themes/light";
+@use "bulma/sass/themes/setup";
+
+@forward "bulma/sass/utilities/initial-variables";
+@forward "bulma/sass/utilities/derived-variables";
+@forward "bulma/sass/utilities/mixins";
+
+@each $name, $color in dv.$colors {
+    .has-text-#{$name} {
+        color: hsl(var(--bulma-#{$name}-h), var(--bulma-#{$name}-s), var(--bulma-#{$name}-l)) !important;
+    }
+
+    .has-background-#{$name} {
+        background-color: hsl(var(--bulma-#{$name}-h), var(--bulma-#{$name}-s), var(--bulma-#{$name}-l)) !important;
+    }
+}
+
+@each $name, $shade in dv.$shades {
+    .has-text-#{$name} {
+        color: $shade !important;
+    }
+
+    .has-background-#{$name} {
+        background-color: $shade !important;
+    }
+}
+
+// Light theme only, Bulma's dark mode is not used.
+:root {
+    @include light.light-theme;
+    @include setup.setup-theme;
+}

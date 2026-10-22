@@ -1,3 +1,114 @@
+@use "bulma";
+
+.navbar-item, .navbar-link {
+    // Bulma 1 adds a flex gap, the flags bring their own margin
+    gap: 0;
+}
+
 .navbar-item img {
     max-height: 1.5rem;
+}
+
+:root {
+    // Bulma 1 darkens link and primary text for contrast, keep the brand turquoise.
+    --bulma-link-on-scheme-l: var(--bulma-link-l);
+    --bulma-primary-on-scheme-l: var(--bulma-primary-l);
+
+    // Hover and active states darken like in Bulma 0.8.
+    --bulma-hover-background-l-delta: -2.5%;
+    --bulma-active-background-l-delta: -5%;
+}
+
+// The layout wraps every page in .content, whose heading color would override titles (e.g. in a hero).
+.content .title {
+    color: var(--bulma-title-color);
+}
+
+// Bulma 0.8 aligned controls left, Bulma 1 inherits the alignment (centered inside the hero).
+.control {
+    text-align: left;
+}
+
+// bulma-switch 2.0.4 turned the label into a 2.5em high flex box, keep the inline label of 2.0.
+.switch[type=checkbox] + label {
+    display: initial;
+    height: auto;
+    line-height: initial;
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        top: .25rem;
+    }
+}
+
+// Bulma 0.8 drew the dropdown and select arrows with a heavier, rounded stroke.
+.navbar-link:not(.is-arrowless)::after,
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-radius: 2px;
+}
+
+// Bulma 0.8 let links in a colored hero inherit its text color, e.g. links inside a read message.
+.hero.is-primary a:not(.button),
+.hero.is-primary strong {
+    color: inherit;
+}
+
+// Bulma 1 derives these from the button padding, keep the spacing of Bulma 0.8.
+.button .icon {
+    &:first-child:not(:last-child) {
+        margin-inline-start: calc(-.5em - 1px);
+        margin-inline-end: .25em;
+    }
+
+    &:last-child:not(:first-child) {
+        margin-inline-start: .25em;
+        margin-inline-end: calc(-.5em - 1px);
+    }
+
+    &:first-child:last-child {
+        margin-inline-start: calc(-.5em - 1px);
+        margin-inline-end: calc(-.5em - 1px);
+    }
+}
+
+// Bulma 1 rebuilds the light shades from rounded HSL values and tints their text, keep the exact colors.
+.has-background-light {
+    background-color: bulma.$light !important;
+}
+
+.hero.is-light {
+    background-color: bulma.$light;
+    color: rgba(0, 0, 0, .7);
+}
+
+// Navbar hover states of Bulma 0.8.
+a.navbar-item, .navbar-link {
+    --bulma-navbar-item-hover-background-l-delta: -2%;
+
+    &:focus, &:focus-within, &:hover, &.is-active {
+        color: bulma.$link;
+    }
+}
+
+.navbar-item.has-dropdown:is(:focus, :hover, .is-active) .navbar-link {
+    --bulma-navbar-item-background-l-delta: -2%;
+    --bulma-navbar-item-background-a: 1;
+}
+
+.navbar-dropdown a.navbar-item:is(:focus, :hover) {
+    --bulma-navbar-item-background-l-delta: -4%;
+    color: bulma.$black;
+}
+
+.navbar-dropdown {
+    padding-bottom: .5rem;
+
+    @include bulma.desktop {
+        box-shadow: 0 .5rem .5rem rgba(10, 10, 10, .1);
+    }
 }
