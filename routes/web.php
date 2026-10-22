@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 // locale
-Route::get('lang/{locale}', 'LanguageController@update');
+Route::get('lang/{locale}', [LanguageController::class, 'update']);
 
 // message
 Route::get('/', function () {
@@ -33,9 +35,9 @@ Route::get('/ru', function () {
 
 	return view('frontPage.frontPage');
 });
-Route::get('/{uid}_{key}','MessageController@open');
-Route::get('/n', 'MessageController@read');
-Route::post('/n', 'MessageController@read');
+Route::get('/{uid}_{key}', [MessageController::class, 'open']);
+Route::get('/n', [MessageController::class, 'read']);
+Route::post('/n', [MessageController::class, 'read']);
 
 // pages
 Route::get('/faq', function () {

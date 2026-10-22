@@ -49,6 +49,13 @@ class MessageTest extends TestCase
             ->assertHeader('X-RateLimit-Limit', 60);
     }
 
+    public function testCreateEndpointDoesNotAllowCrossOriginRequests()
+    {
+        $this->post('/api/message/create.json', ['message' => 'Hello world'], ['Origin' => 'https://example.org'])
+            ->assertOk()
+            ->assertHeaderMissing('Access-Control-Allow-Origin');
+    }
+
     public function testMessageIsDestroyedAfterReading()
     {
         [$uid, $key] = $this->createMessage(['message' => 'Top secret', 'deleteAfterRead' => 'on']);
