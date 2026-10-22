@@ -1,4 +1,6 @@
 /node_modules
+/playwright-report
+/test-results
 /public/hot
 /public/storage
 /public/css
@@ -8,6 +10,7 @@
 .env
 .env.backup
 .phpunit.result.cache
+/.phpunit.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log

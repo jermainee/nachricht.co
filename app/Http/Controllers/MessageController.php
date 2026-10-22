@@ -40,7 +40,7 @@ class MessageController extends Controller
 		$message->uid = $this->generateId(16);
 		$message->message = base64_encode(
 			$this->encryptMessage(
-				htmlspecialchars($request->input('message')),
+				htmlspecialchars((string) $request->input('message')),
 				$encryptionKey,
 				$iv
 			)
