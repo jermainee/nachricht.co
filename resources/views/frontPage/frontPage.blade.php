@@ -64,7 +64,7 @@
                     </div>
 
                     <div id="linkForm" class="box is-hidden">
-                        <p class="is-size-5 is-marginless">@lang('frontpage.copyText')</p>
+                        <p class="is-size-5 m-0">@lang('frontpage.copyText')</p>
 
                         @include('components.ads')
 

@@ -130,7 +130,7 @@
             </div>
         </nav>
 
-        <div class="content is-marginless">
+        <div class="content m-0">
             @yield('content')
         </div>
 

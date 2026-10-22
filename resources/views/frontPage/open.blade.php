@@ -17,7 +17,7 @@
             <div class="hero-body">
                 <div class="container">
                     <div class="box">
-                        <p class="is-size-5 is-marginless">
+                        <p class="is-size-5 m-0">
                             @lang('frontpage.openText')
 	                        <?php if($hasPassword): ?>
                                 <br/> @lang('frontpage.openWithPasswordText')

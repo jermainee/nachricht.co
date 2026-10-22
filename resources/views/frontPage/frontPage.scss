@@ -1,3 +1,7 @@
+@use "../../scss/variables" as *;
+@use "../../scss/bulma" as *;
+@use "../../scss/helpers";
+
 .frontPage {
 
     &__messageForm {
@@ -38,8 +42,8 @@
     &__icon {
         @extend .image;
         @extend .is-48x48;
-        @extend .is-marginless;
-        padding-top: $global-padding / 2;
+        @extend .m-0;
+        padding-top: $global-padding * .5;
     }
 
     &__knownFrom {

@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "bulma";
+
 .has-margin-top {
     margin-top: $global-margin;
 }
@@ -24,5 +27,9 @@
 
 .smallContainer {
     @extend .container;
-    max-width: 860px;
+
+    // beats the max-widths Bulma gives .container on wider screens
+    &, &:not(.is-max-tablet):not(.is-max-desktop):not(.is-max-widescreen) {
+        max-width: 860px;
+    }
 }
