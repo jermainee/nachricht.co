@@ -1,4 +1,6 @@
 /node_modules
+/playwright-report
+/test-results
 /public/hot
 /public/storage
 /public/css

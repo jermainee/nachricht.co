@@ -11,11 +11,15 @@
     "scss": "sass ./resources/scss/app.scss ./public/css/app.css",
     "scss-production": "sass --style=compressed --no-source-map ./resources/scss/app.scss ./public/css/app.css",
     "js": "uglifyjs --compress ./resources/js/app.js --output ./public/js/app.js",
-    "build": "npm run scss-production"
+    "build": "npm run scss-production",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "bulma": "^0.8.2",
     "bulma-switch": "^2.0.0",
     "sass": "^1.103.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
   }
 }

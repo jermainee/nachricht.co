@@ -16,3 +16,21 @@
 ## Mainly used packages:
  * [laravel/laravel](https://github.com/laravel/laravel)
  * [jgthms/bulma](https://github.com/jgthms/bulma)
+
+## Development
+Requires PHP 8.5, Composer and Node.js.
+
+```bash
+composer install
+npm ci && npm run build
+cp .env.example .env && php artisan key:generate
+```
+
+### Tests
+```bash
+vendor/bin/phpunit                       # unit and feature tests
+npx playwright install chromium          # once
+npm run test:e2e                         # browser tests, starts `php artisan serve`
+```
+
+The browser tests need a migrated database for the app, e.g. `DB_CONNECTION=sqlite` with `php artisan migrate`.
