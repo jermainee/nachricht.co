@@ -17,7 +17,7 @@
   "dependencies": {
     "bulma": "^1.0.4",
     "bulma-switch": "^2.0.4",
-    "sass": "^1.106.1"
+    "sass": "^1.108.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1"
