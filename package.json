@@ -20,6 +20,6 @@
     "sass": "^1.108.1"
   },
   "devDependencies": {
-    "@playwright/test": "^1.65.0"
+    "@playwright/test": "^1.65.1"
   }
 }
